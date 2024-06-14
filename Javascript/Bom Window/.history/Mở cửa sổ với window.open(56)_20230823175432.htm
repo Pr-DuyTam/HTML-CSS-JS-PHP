@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.open()</title>
+</head>
+<body>
+	<div>Click vào button để xem kết quả</div>
+	<button type="button" onclick="openW()">Mở cửa sổ</button>
+	<button type="button" onclick="closeW()">Đóng cửa sổ</button>
+	<script type="text/javascript">
+		function openW() {
+			a = window.open('https://toidicode.com/doi-tuong-window-trong-javascript-142.html', 'a', 'width=500,height=600');
+			return false;
+		}
+
+		function closeW() {
+			toidicode.close();
+		}
+	</script>
+
+</body>
+</html>

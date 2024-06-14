@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trò chơi phiêu lưu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    canvas {
+      background-color: #000;
+    }
+  </style>
+  <script>
+    var player = {
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      width: 30,
+      height: 30,
+      color: "#00f",
+      speed: 5
+    };
+
+    var objects = []; // Mảng chứa các vật thể trong trò chơi
+
+    function drawPlayer() {
+      context.beginPath();
+      context.rect(player.x, player.y, player.width, player.height);
+      context.fillStyle = player.color;
+      context.fill();
+      context.closePath();
+    }
+
+    function drawObjects() {
+      for (var i = 0; i < objects.length; i++) {
+        var object = objects[i];
+        context.beginPath();
+        context.rect(object.x, object.y, object.width, object.height);
+        context.fillStyle = object.color;
+        context.fill();
+        context.closePath();
+      }
+    }
+
+    function updatePlayerPosition() {
+      if (keyState["ArrowUp"] && player.y > 0) {
+        player.y -= player.speed;
+      }
+      if (keyState["ArrowDown"] && player.y < canvas.height - player.height) {
+        player.y += player.speed;
+      }
+      if (keyState["ArrowLeft"] && player.x > 0) {
+        player.x -= player.speed;
+      }
+      if (keyState["ArrowRight"] && player.x < canvas.width - player.width) {
+        player.x += player.speed;
+      }
+    }
+
+    function draw() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawPlayer();
+      drawObjects();
+
+      updatePlayerPosition();
+
+      requestAnimationFrame(draw);
+    }
+
+    var keyState = {};
+
+    window.addEventListener("keydown", function(event) {
+      keyState[event.code] = true;
+    });
+
+    window.addEventListener("keyup", function(event) {
+      keyState[event.code] = false;
+    });
+
+    draw();
+  </script>
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+
+  <script>
+    var canvas = document.getElementById("gameCanvas");
+    var context = canvas.getContext("2d");
+
+    // Mã JavaScript cho trò chơi sẽ được thêm vào đây
+
+  </script>
+</body>
+</html>

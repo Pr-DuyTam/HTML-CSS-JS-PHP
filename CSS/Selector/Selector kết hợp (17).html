@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector kết hợp</title>
+
+    <style>
+        div p  /* thẻ <p> nằm trong thẻ <div> sẽ chịu tác động của CSS*/
+        {
+            color: yellow;
+            background-color: brown;
+            font-size: 25px;
+        }
+
+        div t strong    /*Thẻ <strong> nẳm trong thẻ <t> và thẻ <t> nằm trong thẻ <div>. Nên chịu tác động CSS, còn <span> thì không*/
+        {
+            color: red;
+            font-size: 25px;
+           background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lập trình Web</p>
+    </div>
+
+<!--------------------------------------------------------------><hr>
+
+    <div>
+        <t>
+            <strong>Lập trình C#</strong> <br>
+            <span>Lập trình CSS</span>
+        </t>
+    </div>
+
+<!--------------------------------------------------------------><hr>
+
+    <p>Lập trình C++</p>
+</body>
+</html>

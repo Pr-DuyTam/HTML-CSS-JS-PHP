@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 10</title>
+
+    <style type="text/css">
+        body{
+            margin:0px ;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #header{
+            background-color: #39e4c2;
+            border: 1px solid #39e4c2;
+            padding: 20px;
+            text-align: center;            
+        }
+        #header > div:nth-child(1){
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        #menu ul{
+            background-color: black;
+            padding: 0px;
+            margin: 0px;
+        }
+        #menu ul::after{
+            clear: both;
+            display: block;
+            content: "";
+        }
+        #main #side img{
+            width: 100%;
+        }
+        #main #content{
+            width: 70%;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+        }
+        #main #content p:last-child{
+            text-align: right;
+        }
+        #footer{
+            padding: 15px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div>Web cơ bản</div>
+        <div>(giới thiệu sơ qua trang web)</div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="side">
+            <p>Thông tin tác giả</p>
+            <p>- Họ tên:.....</p>
+            <p>- Ngày sinh:.....</p>
+            <p>- Giới tính:.....</p>
+            <p>- Địa chỉ:.....</p>
+            <p><img src="./images/bt3.jpg"></p>
+        </div>
+        <div id="content">
+            <h2>Tên đề bài viết</h2>
+            <p>..................................................................................</p>
+            <p>
+                Ngày đăng: 03.12.2002
+            </p>
+        </div>
+    </div>
+    <div id="footer">Thông tin bản quyền</div>
+</body>
+</html>

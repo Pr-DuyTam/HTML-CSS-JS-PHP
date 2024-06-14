@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức addEvenListener</title>
+</head>
+<body>
+    <input type="text" id="input-text" value=""/>
+    <div id="a"></div>
+
+    <script>
+        var input = document.getElementById("input-text");
+        input.addEventListener('keyup',function()
+        {
+            document.getElementById('a').innerHTML = input.value;
+        });
+        input.addEventListener('keyup', function(){
+            if(input.value.length > 5){
+                alert("Bạn đã nhập nhiều hơn 5 kí tự");
+            }
+        });
+    </script>
+    <!--
+        - addEventListener:  cho phép bạn gắn một hàm xử lý sự kiện vào một phần tử cụ thể trên một trang web.
+        Khi sự kiện được chỉ định xảy ra trên phần tử đó, hàm xử lý sự kiện sẽ được thực thi.
+        
+        - Cú pháp:
+        elementObject.addEventListener('eventName',function(e){
+            ......
+        });
+        
+        - evenName: sự kiện bỏ on (onclick -> click; onchange -> change)
+        - function: là tham số thứ 2 chính là phương thức sẽ được chạy khi sự kiện eventName được kích hoạt
+    -->
+</body>
+</html>

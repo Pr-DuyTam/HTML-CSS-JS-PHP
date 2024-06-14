@@ -1,0 +1,74 @@
+<h1>Hình tròn</h1>
+<svg height="200" width="200">
+    <circle cx="100" cy="100" r="90" stroke="green" stroke-width="5" fill="yellow"  /> 
+
+</svg>
+<!--circle : Định nghĩa hình tròn
+    cx vs cy : Định vị trí tâm của đường tròn
+    r: độ lớn của bán kính
+    stroke: màu đường viền tròn
+    stroke-Width: Độ rộng màu đường viền tròn
+    fill: màu bên trong đường tròn    
+-->
+
+<hr>
+
+<h1>Hình chữ nhật</h1>
+<svg width="200" height="200">
+    <rect width="180" height="100" fill="lightblue" stroke="black" />
+</svg>
+<!--rect: định nghĩa hình chữ nhật - hình vuông-->
+
+<hr>
+
+<h2>Hình vuông không bo góc</h2>
+<svg width="200" height="200">
+    <rect width="100" height="100"
+    style="fill:pink;
+    stroke:red;
+    stroke-width:3;
+    fill-opacity:0.2;
+    stroke-opacity:0.8"
+    />
+</svg>
+<!--fill-opacity: độ mờ bên trong ảnh
+    stroke-opacity: Độ mờ của ảnh
+-->
+<h2>Hình vuông có bo góc</h2>
+<svg width="200" height="200">
+    <rect width="180" height="180"
+    rx="30" ry="30" /* rx vs ry : chỉ số bo góc */
+    style="fill:rebeccapurple;
+    stroke:black;
+    stroke-width:5; opacity: 0.5;"
+    />
+</svg>
+
+<hr>
+<h1>Hình elip</h1>
+<svg width="200" height="200">
+<ellipse cx="100" cy="100" rx="90" ry="50" 
+        style="fill:brown; stroke:blue; stroke-width:5; opacity: 0.6;"></ellipse>
+</svg>
+<!--ellipse: Định nghĩa hình elip-->
+
+<hr>
+<h1>Đường thẳng</h1>
+<svg width="200" height="200"> 
+    <line x1="0" y1="0" x2="200" y2="200" style="stroke:red; stroke-width:2;"></line>
+    <line x1="0" y1="100" x2="200" y2="100" style="stroke:blue;"> <!--Line: định nghĩa đường thưởng-->
+</svg>
+
+<hr>     
+
+<h1>Hình đa giác</h1>
+<h2>1. Hình tam giác tạo từ 3 điểm</h2>
+<svg width="400" height="300">
+    <polygon points="200,10 250,190 160,210"
+    style="fill:orange; stroke:black; stroke-width:2"></polygon>
+</svg>
+<h2>2. Hình ngôi sao tạo từ 5 điểm</h2>
+<svg width="400" height="210">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+    style="fill: pink; stroke: purple; stroke-width: 2; fill-rule:evenodd;"></polygon>
+</svg>

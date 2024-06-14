@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <style>
+        /*display: để chỉ định phần tử sẽ hiển thị như thế nào.*/
+        div{
+            border: 1px solid red;
+            display: inline; /*Thành phần cùng nằm trên 1 dòng*/
+        }
+        span{
+            border: 1px solid blue;
+            display: block; /*Thành phần sẽ đứng trên một hàng độc lập*/
+        }
+
+        span.visi{
+            visibility: hidden; /*Nội dung của thẻ span sẽ bị ẩn đi mà vẫn chiếm chỗ như ban đầu*/
+        }
+        span.dis{
+            display: none; /*Nội dung sẽ ẩn đi của thẻ span và không chiếm chỗ như ban đầu*/
+        }
+    </style>
+</head>
+<body>
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JS</div>
+    <div>PHP</div>
+
+    <span>Lập trình web</span>
+    <span>Lập trình C++</span>
+    <span>Lập trình Java</span>
+<hr>
+    <h3>Trường <span class="visi">Đại học</span> An Giang</h3>
+    <h3>Khoa <span class="dis">Công nghệ</span> thông tin</h3>
+</body>
+</html>

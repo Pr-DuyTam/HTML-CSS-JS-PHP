@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức removeEventListener()</title>
+</head>
+<body>
+    <script>
+        // removeEventListener: sẽ xóa đi một hành động đã gắn cho một sự kiện
+        // Cú pháp: object.removeEventListener("click", some_action);
+
+        var a = document.getElementById("b");
+        function do_validate(){
+            // thêm sự kiện onclick
+        }
+        a.addEventListener("click", do_validate);
+        // xóa hành động validate vào sự kiện onclick
+        a.removeEventListener("click",do_validate);
+    </script>
+</body>
+</html>

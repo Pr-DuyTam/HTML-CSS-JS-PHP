@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm thẻ Html theo tên thẻ HTML</title>
+</head>
+<body>
+    <input type="text" value="Lập trình web" />
+    <div>Học JS</div>
+    <div>Học CSS</div> <hr/>
+
+    <script>
+        // Lấy thẻ input và div
+        var a = document.getElementsByTagName('input');
+        var b = document.getElementsByTagName('div'); // Tìm tất cả thẻ div
+
+        // Lấy giá trị của thẻ input và div
+        document.write(a[0].value + "<br>");
+        document.write(b[0].innerHTML);
+        document.write(b[1].innerHTML);
+    </script>
+</body>
+</html>

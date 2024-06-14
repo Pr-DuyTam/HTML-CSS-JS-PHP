@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trò chơi bắn súng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    canvas {
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+
+  <script>
+    var canvas = document.getElementById("gameCanvas");
+    var context = canvas.getContext("2d");
+
+    var player = {
+      x: canvas.width / 2,
+      y: canvas.height - 30,
+      width: 30,
+      height: 30,
+      color: "#00f",
+      speed: 5,
+      isMovingLeft: false,
+      isMovingRight: false
+    };
+
+    var bullets = [];
+    var targets = [];
+
+    function drawPlayer() {
+      context.beginPath();
+      context.rect(player.x, player.y, player.width, player.height);
+      context.fillStyle = player.color;
+      context.fill();
+      context.closePath();
+    }
+
+    function drawBullets() {
+      for (var i = 0; i < bullets.length; i++) {
+        var bullet = bullets[i];
+        context.beginPath();
+        context.rect(bullet.x, bullet.y, bullet.width, bullet.height);
+        context.fillStyle = "#f00";
+        context.fill();
+        context.closePath();
+      }
+    }
+
+    function drawTargets() {
+      for (var i = 0; i < targets.length; i++) {
+        var target = targets[i];
+        context.beginPath();
+        context.rect(target.x, target.y, target.width, target.height);
+        context.fillStyle = "#0f0";
+        context.fill();
+        context.closePath();
+      }
+    }
+
+    function updatePlayerPosition() {
+      if (player.isMovingLeft && player.x > 0) {
+        player.x -= player.speed;
+      }
+      if (player.isMovingRight && player.x < canvas.width - player.width) {
+        player.x += player.speed;
+      }
+    }
+
+    function updateBulletsPosition() {
+      for (var i = 0; i < bullets.length; i++) {
+        var bullet = bullets[i];
+        bullet.y -= 8;
+
+        if (bullet.y < 0) {
+          bullets.splice(i, 1);
+          i--;
+        }
+      }
+    }
+
+    function updateTargetsPosition() {
+      for (var i = 0; i < targets.length; i++) {
+        var target = targets[i];
+        target.y += 2;
+
+        if (target.y > canvas.height) {
+          targets.splice(i, 1);
+          i--;
+        }
+      }
+    }
+
+    function detectCollisions() {
+      for (var i = 0; i < targets.length; i++) {
+        var target = targets[i];
+
+        for (var j = 0; j < bullets.length; j++) {
+          var bullet = bullets[j];
+
+          if (
+            bullet.x < target.x + target.width &&
+            bullet.x + bullet.width > target.x &&
+            bullet.y < target.y + target.height &&
+            bullet.y + bullet.height > target.y
+          ) {
+            targets.splice(i, 1);
+            bullets.splice(j, 1);
+            i--;
+            j--;
+          }
+        }
+      }
+    }
+
+    function draw() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawPlayer();
+      drawBullets();
+      drawTargets();
+
+      updatePlayerPosition();
+      updateBulletsPosition();
+      updateTargetsPosition();
+      detectCollisions();
+
+      requestAnimationFrame(draw);
+    }
+
+    function keyDownHandler(event) {
+      if (event.keyCode === 37) {
+        player.isMovingLeft = true;
+      }
+      if (event.keyCode === 39) {
+        player.isMovingRight = true;
+      }
+      if (event.keyCode === 32) {
+        bullets.push({
+          x: player.x + player.width / 2 - 2.5,
+          y: player.y,
+          width: 5,
+          height: 10
+        });
+      }
+    }
+
+    function keyUpHandler(event) {
+      if (event.keyCode === 37) {
+        player.isMovingLeft = false;
+      }
+      if (event.keyCode === 39) {
+        player.isMovingRight = false;
+      }
+    }
+
+javascript
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    function createTarget() {
+      var targetWidth = Math.random() * 30 + 20;
+      var targetHeight = Math.random() * 30 + 20;
+      var targetX = Math.random() * (canvas.width - targetWidth);
+      var targetY = -targetHeight;
+      targets.push({
+        x: targetX,
+        y: targetY,
+        width: targetWidth,
+        height: targetHeight
+      });
+    }
+
+    setInterval(createTarget, 1000);
+
+    draw();
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi và lấy nội dung bên trong thẻ HTML</title>
+
+    <style>
+       div{
+        color: red;
+        background-color: yellow;
+        font-weight:bold ;
+       }
+    </style>
+</head>
+<body>
+    <script>
+        function set_a(){
+            document.getElementById("a").innerHTML = "Nội dung đã được thay đổi"; 
+        }
+        function get_a(){
+            var html = document.getElementById("a").innerHTML; // Lấy nội dung bên trong thẻ HTML
+            alert("Nội dung cần lấy lại: " + html);
+        }
+    </script>
+
+    <div id="a"> Nội dung của thẻ DIV</div>
+    <input type="button" value="Lấy nội dung" id="get_a" onclick="get_a()"/>
+    <input type="button" value="Thay đổi nội dung" id="set_a" onclick="set_a()"/>
+</body>
+</html>

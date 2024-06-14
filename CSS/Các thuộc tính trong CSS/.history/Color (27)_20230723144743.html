@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các thuộc tính của CSS</title>
+
+    <style>
+        h3{
+            color: red;
+            text-align: center; /*sắp xếp nội dung dữ liệu căn giữa (center) */
+        }
+
+        h2{
+            text-align: right; /*Sắp xếp nội dung dữ liệu canh phải*/
+        }
+
+        h1{
+            text-align: left; /*Sắp xếp nội dung dữ liệu canh trái*/
+        }
+
+        h2.spacing1{
+            letter-spacing: 3px; /*Quy định khoảng cách giữa cách ký tự*/
+            text-align: left;
+        }
+
+        h2.spacing2{
+            letter-spacing: -3px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <p style="color: blue;">Các thuộc tính của CSS</p>
+    <h1>Chữ canh bên trái</h1>
+    <h2>Chữ canh bên phải</h2>
+    <h3>Chữ canh giữa</h3>
+    <h2 class="spacing1">Khoảng cách giữa các ký tự là 3px </h2>
+    <h2 class="spacing2">Khoảng cách giữa các ký tự là -3px </h2>
+    <p class="upper">Chữ in hoa</p>
+    <p class="lower">Chữ in thường</p>
+</body>
+</html>

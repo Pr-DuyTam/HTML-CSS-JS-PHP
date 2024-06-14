@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi và lấy giá trị của thẻ HTML</title>
+</head>
+<body>
+    <script>
+        function a(){
+            var b = document.getElementById("b");
+            var c = b.c;
+            if (c == "button"){
+                b.c = 'text';
+            }
+            else{
+                b.c ="button";
+            }
+        }
+    </script>
+    <input type="button" value="Click" onclick="a()" id="b">
+</body>
+</html>

@@ -1,0 +1,42 @@
+<h1>Phần tử &lt;textarea&gt;</h1>
+<textarea cols="50" rows="4"> 
+    Đại học An Giang
+</textarea>
+<!--textarea: Tạo ra trường nhập văn bản gồm nhiều dòng
+        rows: số dòng hiển thị
+        cols: độ rộng hiển thị
+-->
+
+<hr>
+<h1>Phần tử &lt;button&gt;</h1>
+<!--Button: dùng để tạo nút nhấn-->
+<button type="button" onclick="alert('Xin chào!')">
+    OK
+</button>
+
+<hr>
+<h1>Phần tử &lt;datalist&gt;</h1>
+<form>
+    <input list="mausac">
+    <datalist id="mausac">
+        <option value="Blue"></option>
+        <option value="Black"></option>
+        <option value="Red"></option>
+        <option value="yellow"></option>
+    </datalist>
+</form>
+<!--datalist: tạo danh sách tùy chọn. Nhập một hay vài ký tự vào ô, thì hiển thị gợi ý
+    List của input phải tham chiếu đến id
+-->
+
+<hr>
+<h1>Phần tử &lt;output&gt;</h1>
+<form oninput="kq.value=parseInt(a.value) + parseInt(b.value)">
+<input type="number" id="a" name="a" value="1">
++
+<input type="number" name="b" id="b" value="1">
+=
+<output name="kq" for="a b"></output>
+</form>
+
+<!--output : Biểu diễn kết quả từ một phép tính-->

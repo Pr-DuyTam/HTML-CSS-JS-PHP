@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element::before and after</title>
+
+    <style>
+        h3::before /*Thêm vài nội dung trước nội dung của phần tử. Ví dụ thêm ảnh vào trước nội dung cho thẻ <h3> */
+        {
+            content: url(./Ảnh/tải\ xuống.jpg);
+        }
+
+        h4::after /*Thêm vài nội dung sau nội dung của phần tử. Ví dụ thêm ảnh vào sau nội dung cho thẻ <h4> */
+        {
+            content: url(./Ảnh/tải\ xuống.jpg);
+        }
+    </style>
+</head>
+<body>
+    <h2>Các môn học</h2>
+    <h3>Lập trình Web</h3>
+    <h3>Lập trình java</h3>
+    <h3>Lập trình CSS</h3>
+    
+    <h2>Các thành viên trong gia đình</h2>
+    <h4>Cha</h4>
+    <h4>Mẹ</h4>
+    <h4>Anh trai</h4>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng nhập</title>
+
+    <script>
+        function validate()
+        {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var re_password = document.getElementById("re-password").value;
+        }
+
+        if (username == "")
+            {
+                alert("Bạn chưa nhập tên đăng nhập");
+                return false;
+            }
+        if (password == "")
+            {
+                alert("Bạn chưa nhập mật khẩu");
+                return false;
+            }
+        if (password != re_password)
+            {
+                alert("Mật khẩu sai");
+                return false;
+            }
+
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        Username:
+        <input type="text" name="username" id="username" value=""/> <br/>
+
+        Password:
+        <input type="text" name="password" id="password" value=""/> <br/>
+
+        Re Password:
+        <input type="text" value="" name="re-password" id="re-password"/> <br/>
+        <input type="submit" value="Register" onclick="return validate()" />
+    </form>
+</body>
+</html>

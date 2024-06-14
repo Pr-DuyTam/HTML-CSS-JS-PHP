@@ -1,0 +1,26 @@
+/* Sử dụng RGB
+Gồm:
+- rgb(255,0,0) = red
+- rgb(0,255,0) = green
+- rgb(0,0,255) = blue
+- rgb(0,0,0)   = black
+- rgb(255,255,255) = white
+*/
+h1{
+    background-color: rgb(23,123,213);
+    color: rgb(255,255,255);
+    border: 1px solid rgb(1,1,1);
+}
+
+/*Sử dụng HSL
+    hsl(hue, saturation,lightness)
+    hue: Giá trị từ 0 đến 360
+    saturation: Giá trị từ 0 đến 100%
+    lightness:  Giá trị từ 0 đến 100%
+*/
+
+h1{
+    background-color: hsl(180, 50%, 95%);
+    color: hsl(160, 50%, 50%);
+    border: 1px solid hsl(100,100%,100%);
+}

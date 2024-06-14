@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CSS</title>
+</head>
+<body>
+    <script>
+        function set_a()
+        {
+            document.getElementById("message").style.background = 'red';
+        }
+        function change_color()
+        {
+            document.getElementById("message").style.color = 'blue';
+        }
+        function change_font_size()
+        {
+            document.getElementById("message").style.fontSize = '30px';
+        }
+        function change_height()
+        {
+            document.getElementById("message").style.height = '500px';
+        }
+    </script>
+
+    <div id="a">
+        Nội dung của thẻ 
+    </div>
+    <input type="button" value="Lấy nội dung" id="get_a" onclick="get_a()"/>
+    <input type="button" value="Thay đổi nội dung" id="set_a" onclick="set_a()"/>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+    <script>
+        function gptb2() {
+            var a = eval(f.so_a.value);
+            var b = eval(f.so_b.value);
+            var c = eval(f.so_c.value);
+            var delta = b * b - 4 * a * c;
+
+            if (a == 0)
+            {
+                if (b == 0)
+                {
+                    if (c == 0)
+                    {
+                        f.kq.value = 'Phương trình vô số nghiệm';
+                    } 
+                    else
+                    {
+                        f.kq.value = 'Phương trình vô nghiệm';
+                    }
+                } 
+                else
+                {
+                    f.kq.value = 'Phương trình có nghiệm duy nhất: x = ' + (-c / b);
+                }
+            } 
+            else
+            {
+                if (delta < 0)
+                {
+                    f.kq.value = 'Phương trình vô nghiệm';
+                }
+                else if (delta == 0) {
+                    f.kq.value = 'Phương trình có nghiệm kép: x = ' + (-b / (2 * a));
+                }
+                else {
+                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    f.kq.value = 'Phương trình có nghiệm là: x1 = ' + x1 + ', x2 = ' + x2;
+                }
+            }
+        }
+    </script>
+    <style>
+        table {
+            border: 1px solid blue;
+            box-shadow: 5px 5px 5px red;
+            border-radius: 8px;
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" name="f" method="post">
+        <table>
+            <tr>
+                <td>Số a:</td>
+                <td><input type="text" name="so_a"></td>
+            </tr>
+
+            <tr>
+                <td>Số b:</td>
+                <td><input type="text" name="so_b"></td>
+            </tr>
+
+            <tr>
+                <td>Số c:</td>
+                <td><input type="text" name="so_c"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="Giải" onclick="gptb2()">
+                </td>
+                <td>
+                    <input type="text" name="kq" value="" size="40">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

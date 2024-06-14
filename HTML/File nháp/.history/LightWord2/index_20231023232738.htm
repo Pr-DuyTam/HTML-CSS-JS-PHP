@@ -1,0 +1,237 @@
+<style>
+    body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #c5c5c5;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .main-container {
+    width: 100%;
+    height: 75px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto 200px 200px 200px auto;
+    position: relative;
+    opacity:0;
+  }
+  
+  .slider-main-container,
+  .slider-magnifier-container {
+    display: flex;
+    align-items: flex-start;
+    font-family: "Red Hat Mono", monospace;
+    font-size: 35px;
+    color: #525252;
+    width: 200px;
+    height: 75px;
+    position: relative;
+    top: 0;
+    position: absolute;
+  }
+  .slider-magnifier-container {
+    font-weight: 800;
+    font-size: 45px;
+    overflow: hidden;
+    height: 75px;
+  }
+  
+  .hr {
+    grid-column: 2;
+  }
+  
+  .mn {
+    grid-column: 3;
+  }
+  
+  .sc {
+    grid-column: 4;
+  }
+  
+  .slider-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider {
+    width: 75px;
+    text-align: center;
+    position: absolute;
+  }
+  
+  .slider-magnifier-container .slider {
+    z-index: 1;
+    background: #979797;
+    color: #000;
+  }
+  
+  p {
+    margin: 0;
+    line-height: 75px;
+  }
+</style>
+<div class="main-container">
+
+    <div class="slider-main-container hr">
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+        </div>
+      </div>
+  
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+          <p class="nbr">6</p>
+          <p class="nbr">7</p>
+          <p class="nbr">8</p>
+          <p class="nbr">9</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="slider-magnifier-container hr">
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+        </div>
+      </div>
+  
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+          <p class="nbr">6</p>
+          <p class="nbr">7</p>
+          <p class="nbr">8</p>
+          <p class="nbr">9</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="slider-main-container mn">
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+          <p class="nbr">6</p>
+          <p class="nbr">7</p>
+          <p class="nbr">8</p>
+          <p class="nbr">9</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="slider-magnifier-container mn">
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+          <p class="nbr">6</p>
+          <p class="nbr">7</p>
+          <p class="nbr">8</p>
+          <p class="nbr">9</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="slider-main-container sc">
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+          <p class="nbr">6</p>
+          <p class="nbr">7</p>
+          <p class="nbr">8</p>
+          <p class="nbr">9</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="slider-magnifier-container sc">
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="slider">
+          <p class="nbr">0</p>
+          <p class="nbr">1</p>
+          <p class="nbr">2</p>
+          <p class="nbr">3</p>
+          <p class="nbr">4</p>
+          <p class="nbr">5</p>
+          <p class="nbr">6</p>
+          <p class="nbr">7</p>
+          <p class="nbr">8</p>
+          <p class="nbr">9</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<link rel="stylesheet" href="./js.js">

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi và lấy giá trị của thẻ HTML</title>
+</head>
+<body>
+    <script>
+        function change(){
+            //Lấy đối tượng
+            var object = document.getElementById("object"); 
+            // Lấy thuộc tính type
+            var type = object.type;
+            // Kiểm tra thuộc tính type và thay đổi
+            if (type == "button"){
+                object.type = 'text';
+            }
+            else{
+                object.type ="button";
+            }
+        }
+    </script>
+    <input type="button" value="Click" onclick="change()" id="object">
+</body>
+</html>
+<!--
+    Thay đổi giá trị của một thuộc tính HTML bất kì:
+    document.getElementById("element").attributeName = "New value";
+
+    Lấy gái trị của một thuộc tính HTML:
+    var value = document.getElementById("element").attributeName;
+-->

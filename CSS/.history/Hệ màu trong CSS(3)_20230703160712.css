@@ -1,0 +1,13 @@
+/* Sử dụng RGB
+Gồm:
+- rgb(255,0,0) = red
+- rgb(0,255,0) = green
+- rgb(0,0,255) = blue
+- rgb(0,0,0)   = black
+- rgb(255,255,255) = white
+*/
+h1{
+    background-color: rgb(23,123,213);
+    color: rgb(255,255,255);
+    border: 1px solid rgb(1,1,1);
+}

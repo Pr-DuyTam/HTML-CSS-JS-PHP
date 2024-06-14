@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức addEvenListener</title>
+</head>
+<body>
+    <input type="text" id="input-text" value=""/>
+    <div id="a"></div>
+
+    <script>
+        var input = document.getElementById("input-text");
+        input.addEventListener('keyup',function()
+        {
+            document.getElementById('a').innerHTML = input.value;
+        });
+        input.addEventListener('keyup', function(){
+            if(input.value.length > 5){
+                alert("Bạn đã nhập nhiều hơn 5 kí tự");
+            }
+        });
+    </script>
+    <!--
+        elementObject.addEventListener('eventName',function(e){
+            ......
+        });
+        - evenName: sự kiện bỏ on (onclick -> click; onchange -> change)
+    -->
+</body>
+</html>

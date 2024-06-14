@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.open()</title>
+</head>
+<!--
+    window.open: Mở một cửa sổ mới 
+    Cú pháp: window.open(url, name, options)
+    + url: là đường dẫn website muốn mở
+    + name: Là tên đặt cho cửa sổ này
+    + options: là chuỗi các thông số được cách nhau bởi dấu phẩy
+
+-->
+<body>
+	<div>Click vào button để xem kết quả</div>
+	<button type="button" onclick="open()">Mở cửa sổ</button>
+	<button type="button" onclick="close()">Đóng cửa sổ</button>
+	<script type="text/javascript">
+		function open() {
+			duytam = window.open('https://toidicode.com/doi-tuong-window-trong-javascript-142.html', 'a', 'width=500,height=600');
+			return false;
+		}
+
+		function close() {
+			duytam.close();
+		}
+	</script>
+
+</body>
+</html>

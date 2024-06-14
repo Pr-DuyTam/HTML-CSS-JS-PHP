@@ -1,0 +1,120 @@
+<h1  align="center">Các kiểu của phần tử &lt;Input&gt; 2</h1>
+
+<h3>1. Kiểu range</h3>
+<form oninput="kq.value = so.value">
+<input type="range" name="so" min="0" max="500" step="5">
+<output name="kq" for="so"></output>
+</form>
+<!--
+    Range: Tạo trường chọn giá trị kiểu thanh trượt. Giá trị mặc định 0 - 100
+    Thiết lập giá trị: min(thiết lập giá trị tối thiểu) max(thiết lập giá trị tối đa) step(khoảng giá trị tăng/giảm)
+-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>2. Kiểu data</h3>
+<form>
+    Chọn ngày:
+    <input type="date">
+</form>
+<!-- Kiểu data: tạo ra ô nhập, chịn ngày/tháng/năm. Có thể giới hạn thời gian thông qua thuộc tính Min và Max-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>3. Kiểu datatime-local</h3>
+<form >
+    Chọn ngày giờ:
+    <input type="datetime-local">
+</form>
+<!--Datetime-local: Dùng để tạo ra một ô nhập, chọn gồm ngày và giờ-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>4. Kiểu month</h3>
+<form>
+    Chọn tháng năm:
+    <input type="month">
+</form>
+<!--Kiểu month: Tạo ra một ô chọn tháng và năm-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>5. Kiểu time</h3>
+<form>
+    <input type="time">
+</form>
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>6. Kiểu week</h3>
+<form>
+    Chọn tuần:
+    <input type="week">
+</form>
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>7. Kiểu email</h3>
+<form>
+    Email:
+    <input type="email">
+    <input type="button" value="Ok" onclick="alert('Xin chào!')">
+</form>
+<!--Kiểu email: Tạo địa chỉ email-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>8. Kiểu seach</h3>
+<form>
+    Tra cứu:
+    <input type="search">
+    <input type="button" value="Seach" onclick="alert('Thành công')">
+</form>
+<!--Kiểu seach: Tạo ra một ô nhập tìm kiếm-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>9. Kiểu tel</h3>
+<form>
+    Điện thoại (10 số )
+    <input type="tel" name="txtsodt" pattern="[0-9]{10}">
+    <input type="submit" value="Gửi">
+</form>
+<!--Kiểu tel: Nhập số điện thoại
+    Pattern: Tạo khuôn nhập liệu.
+-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>10. Kiểu url</h3>
+<form>
+    Địa chỉ trang:
+    <input type="url">
+    <input type="submit" value="Kiểm tra">
+</form>
+<!--Kiểu url: Tạo ra một ô nhập địa chỉ url.-->
+
+<!------------------------------------------------------------------------------>
+
+<hr>
+<h3>Các thuộc tính của input</h3>
+
+<h4>disable : Khóa phần tử, không cho chọn hay sửa</h4>
+<h4>max     : Chỉ định giá trị tối đa</h4>
+<h4>min     : Chỉ định giá trị tối thiểu</h4>
+<h4>maxlenghth: Chỉ định số ký tự tối đa</h4>
+<h4>step    : Khoảng giá trị mỗi lần tăng/giảm</h4>
+<h4>value   : Gán giá trị mặc định cho phần tử</h4>
+<h4>size    : Chỉ định kích  thước theo số ký tự</h4>
+<h4>required: Bắt buộc nhập, không được bỏ trống </h4>
+<h4>readonly: Không cho cập nhật</h4>
+<h4>pattern : Mẫu biểu thức chính qui để kiểm tra giá trị hợp lệ</h4>

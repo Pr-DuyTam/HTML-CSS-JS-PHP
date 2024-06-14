@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CSS</title>
+</head>
+<body>
+    <script>
+        function change_background()
+        {
+            document.getElementById("message").style.background = 'red';
+        }
+        function change_color()
+        {
+            document.getElementById("message").style.color = 'blue';
+        }
+        function change_font_size()
+        {
+            document.getElementById("message").style.fontSize = '30px';
+        }
+        function change_height()
+        {
+            document.getElementById("message").style.height = '500px';
+        }
+    </script>
+
+    <div id="message">
+        Chào mừng bạn đã đến bình nguyên vô tận
+    </div>
+    <input type="button" value="Change background" onclick="change_background()"/>
+    <input type="button" value="Thay đổi nội dung" id="set_a" onclick="set_a()"/>
+</body>
+</html>

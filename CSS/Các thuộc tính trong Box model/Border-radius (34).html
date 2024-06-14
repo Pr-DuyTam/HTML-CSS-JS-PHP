@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-radius</title>
+
+    <style type="text/CSS">
+        div.auto{
+            width: 500px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 0px 15px 50% 75px; /*border-radius: thiết lập độ cong bo các góc*/
+            color: blue;
+        }
+
+        div.dif{
+            width: 400px;    height: 100px;
+            background-color: red;
+            border: 3px solid blue;
+            border-radius: 75px 100px 20px / 50px 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="auto">
+    Thẻ div được bo góc như sau:
+    góc top-left là 0px <br>
+    góc top-right là 15px <br>
+    góc bottom-right là 50% <br>
+    góc bottom-left là 75px
+    </div>
+<hr>
+    <div class="dif">
+        Góc 1 là chiều rộng 75px, chiều cao 50px <br>
+        Góc 2 là chiều rộng 100px, chiều cao 10px <br>
+        Góc 3 là chiều rộng 20px, chiều cao 50px <br>
+        Góc 4 là chiều rộng 100px, chiều cao là 10px
+    </div>
+</body>
+</html>

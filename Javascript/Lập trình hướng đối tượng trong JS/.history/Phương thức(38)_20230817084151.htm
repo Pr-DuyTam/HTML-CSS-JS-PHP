@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức</title>
+</head>
+<body>
+    <script>
+        // cách 1
+        var Sinhvien = new Object();
+            Sinhvien.mssv = '';
+            Sinhvien.ten = '';
+        Sinhvien.addSinhvien = function()
+        {
+            // do some thing
+        };
+        Sinhvien.TestLogin = function()
+        {
+            // do some thing
+        };
+
+        // Cách 2
+        var Sinhvien =
+        {
+            addSinhvien : function ()
+            {
+                // do some thing
+            },
+            TestLogin : function()
+            {
+                // do some thing
+            }
+        }
+
+        Sinhvien.addSinhvien(); //Gọi để dùng phương thức
+    </script>
+</body>
+</html>

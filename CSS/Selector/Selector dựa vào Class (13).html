@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector dựa vào Class</title>
+
+    <style>
+        div p.CSS{
+            color: red;
+            background-color: yellow;
+        }
+        div .laptrinh{
+            color: blue;
+            font-size: 20px;
+        }
+
+        p.html{
+            background-color: pink;
+        }
+
+        .main{
+            color: violet;
+            font-size: 20px;  /* .main: Tìm thẻ HTML bất kỳ có class là main (gồm: Duy Tâm, Nguyễn Khánh)*/
+            background-color: black;
+        }
+
+        div.main{
+            background-color: yellow;
+            height: 100px;
+            width: 200px;
+            color: brown; /* div.main: Tìm thẻ <div> bất kỳ có class là main (Học với chả hành, học thì ngu như bò mà còn lười)*/
+        }
+
+        div .main{
+            background-color: blue;
+            color: red; /* div .main   : là tìm thẻ HTML bất kỳ có class là main và thẻ HTML đó phải là con của thẻ <div> (gồm: Hello và How are you)*/
+        }
+
+        div p.main{
+            background-color: brown;
+            font-size: 20px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="CSS">Lập trình CSS</p>
+        <p class="CSS">Lập trình hướng đối tượng</p>
+        <hr>
+
+        <h1 class="laptrinh">Lập trình C#</h1>
+        <h1 class="laptrinh">Lập trình java</h1>
+
+    </div>
+    <hr>
+
+    <div class="main">Học với chả hành</div>
+    <div class="main">Học thì ngu như bò mà còn lười</div>
+    <hr>
+
+    <div><h1 class="main">Hello</h1></div>
+    <div><h2  class="main">How are you</h1></div>
+    <hr>
+
+    <p class="html">Lập trình HTML</p>
+    <p class="html">Lập trình PHP</p>
+    <hr>
+
+    <p class="main">Duy Tâm</p>
+    <p class="main">Nguyễn Khánh</p>
+    <hr>
+
+    <div><p class="main">Thành công</p></div>
+    <div><p class="main">Sẽ vấp ngã</p></div>
+</body>
+</html>

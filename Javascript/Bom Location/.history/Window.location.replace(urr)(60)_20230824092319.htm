@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window.location.replace(urr)</title>
+</head>
+<body>
+    Click vào để chuyển hướng đến trang google.com
+    <button onclick="replacePage()">replace()</button> 
+    <button onclick="hrefPage()">location.href</button>
+
+    <script>
+        function replacePage()
+        {
+            window.location.replace('https://google.com'); // Click vào repalce để gọi phương thức ra, thì nút Back sẽ bị ẩn và không quay lại được trang web
+        }
+        function hrefPage()
+        {
+            window.location.href = 'https://google.com';
+        }
+    </script>
+</body>
+</html>
+<!--
+    window.location.replace(urr): ghi đè trang web. Nhưng phương pháp này ít ai dùng, thường thì dùng (window.location.href ="url")
+    - với replace(): trình duyệt sẽ không đưa vào lịch sử
+    - Với location.href: trình duyệt sẽ có đưa vào lịch sử
+-->

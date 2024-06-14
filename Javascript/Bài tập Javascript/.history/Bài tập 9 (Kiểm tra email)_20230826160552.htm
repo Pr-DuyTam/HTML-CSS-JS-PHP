@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra email</title>
+    <script>
+        function ktemail()
+        {
+            var at = the_email.indexOf("@");
+            var dot = the_email.lastIndexOf("."); // lastIndexOf: Tìm vị trí cuối cùng của một ký tự trong một chuỗi
+            var space = the_email.indexOf(" "); // indexOf: Tìm vị trí đầu tiên của một ký tự trong chuỗi
+
+            if(at < 1) || (dot < at + 1) || (dot = the_email.length - 1)
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="post" name="f" onsubmit="return ktemail(f.email.value);">
+        <input type="text" name="email" value="" placeholder="Nhập email">
+        <input type="submit" value="Gửi">
+    </form>
+</body>
+</html>

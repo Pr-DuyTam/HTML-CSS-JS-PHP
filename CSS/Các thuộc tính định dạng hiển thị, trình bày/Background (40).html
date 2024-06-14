@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+
+    <style>
+        div.image{
+            background-image: url(./Ảnh/banner.jpg); /*xác định hình ảnh nền*/
+            background-repeat: no-repeat; /*xác định ảnh nền được lập như thế nào*/
+            background-attachment: fixed; /*được dùng kèm theo với background-image để cho phép nền được cố định hay cuộc so với trang*/
+            width: 600px;
+            height: 200px;
+            border: 2px solid red;
+            font-weight: bold; /*in đậm văn bản*/
+        }
+        div.color{
+            background-color: #ffffcc;
+            font-weight: bold;
+            border: 2px solid blue ;
+            height: 400px;
+        }
+
+        div.repeat{
+            background-image: url(./Ảnh/tải\ xuống.png);
+            background-repeat: repeat-x;
+            height: 400px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="image">Tạo ảnh nền cho thẻ div, ảnh không lặp lại</div>
+    <div class="color">Nội dung này được tô màu nền <br>
+    do sử dụng thuộc tính background-color.
+    </div>
+    <div class="repeat">Hình được lập theo chiều ngang</div>
+</body>
+</html>

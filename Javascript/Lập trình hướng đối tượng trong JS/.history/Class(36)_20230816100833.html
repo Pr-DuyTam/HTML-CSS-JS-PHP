@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+        class Khachhang{
+            constructor(ten)
+            {
+                this.ten = ten;
+            }
+            xinchao()
+            {
+                console.log("Tên Khách hàng là " + this.ten);
+            }
+        }
+        let KH1 = new Khachhang("An");
+        KH1.xinchao();
+    </script>
+</body>
+</html>
+<!--
+    class Tên_Class{
+        constructor ()
+        {
+            phương thức 1 () {}
+            phương thức 2 () {}
+        }
+    }
+    /*tạo object mới từ class*/
+    let Tên_đối_tượng = new Tên_Class();
+    Tên_đói_tượng.Phương_thức();
+-->

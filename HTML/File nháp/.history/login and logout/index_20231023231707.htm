@@ -1,0 +1,47 @@
+<div class="text-container">
+    <span style="--color: #fff; --delay: 0s">c</span>
+    <span style="--color: #fff; --delay: 0.25s">o</span>
+    <span style="--color: #fff; --delay: 0.5s">d</span>
+    <span style="--color: #fff; --delay: 0.75s">e</span>
+    <span style="--color: #84BCDA; --delay: 1s">t</span>
+    <span style="--color: #84BCDA; --delay: 1.25s">h</span>
+    <span style="--color: #84BCDA; --delay: 1.5s">e</span>
+    <span style="--color: #DA4167; --delay: 1.75s">w</span>
+    <span style="--color: #DA4167; --delay: 2s">o</span>
+    <span style="--color: #DA4167; --delay: 2.25s">r</span>
+    <span style="--color: #DA4167; --delay: 2.5s">l</span>
+    <span style="--color: #DA4167; --delay: 2.75s">d</span>
+    <span style="--color: #C589E8; --delay: 3s">!</span>
+  </div>
+<style>
+    body {
+  background-color: #000;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.text-container > span {
+  font-family: "Baloo Thambi", cursive;
+  font-size: 7rem;
+  text-transform: uppercase;
+  animation: glow 6s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    color: var(--color);
+    text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+  }
+
+  10%,
+  90% {
+    color: #111;
+    text-shadow: none;
+  }
+}
+</style>

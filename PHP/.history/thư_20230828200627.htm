@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang web kiểm tra ngữ pháp tiếng Anh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question-text {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .answer-options {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .answer-option {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .answer-option:hover {
+      background-color: #f9f9f9;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trang web kiểm tra ngữ pháp tiếng Anh</h1>
+
+  <div class="question">
+    <p class="question-text">Câu hỏi: What time _____ now?</p>
+    <div class="answer-options">
+      <div class="answer-option">is</div>
+      <div class="answer-option">are</div>
+      <div class="answer-option">am</div>
+      <div class="answer-option">be</div>
+    </div>
+  </div>
+
+  <button class="submit-button">Kiểm tra</button>
+
+  <div class="result"></div>
+
+  <script>
+    const submitButton = document.querySelector(".submit-button");
+    const resultDiv = document.querySelector(".result");
+
+    submitButton.addEventListener("click", function() {
+      const selectedOption = document.querySelector(".answer-option:hover");
+      if (selectedOption.textContent === "is") {
+        resultDiv.textContent = "Chính xác!";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.textContent = "Sai!";
+        resultDiv.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

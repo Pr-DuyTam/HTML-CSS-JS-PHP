@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector dựa vào Class</title>
+
+    <style>
+        .CSS{
+            color: red;
+            background-color: yellow; /* Chỉ có thẻ <p> class="CSS" mới chịu tác động của CSS*/
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="java">Lập trình JS</p>
+    <p class="CSS">Lập trình CSS</p>
+    <p class="html">Lập trình HTML</p>
+</body>
+</html>
+<!--
+    Class giống như ID
+    Class : thì tất cả CSS áp dụng được cho tất cả thẻ HTML nào có cùng tên class
+    ID    : chỉ 1 lần duy nhất cho 1 thẻ HTML
+-->

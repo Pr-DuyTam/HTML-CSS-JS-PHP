@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm bản tin</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table bgcolor="#FFFFCC" border="0" cellpadding="0" cellspacing="1" height="50" align="center">
+            <tr height="40" bgcolor="yellow">
+                <th colspan="2">
+                    <font size="5">Thêm Bản Tin</font>
+                </th>
+            </tr>
+
+<!------------------------------------------------------------------------------------------------------------>            
+
+                        <!--Chuyên mục-->
+            <tr>
+                <td bgcolor="gray"><b>Chuyên mục</b></td>
+            <td>
+                <select name="optbantin">
+                    <option value="1" selected>Tên chuyên mục(đang câp nhật)</option>
+                    <option value="2">Tên chuyên mục(đã cập nhật)</option>
+                </select>
+            </td>
+
+            </tr>
+        
+<!------------------------------------------------------------------------------------------------------------>
+
+                        <!--Tiêu đề-->    
+            <tr>
+                <td  bgcolor="gray"><b>Tiêu đề</b> </td>
+                <td> <input type="text"></td>
+            </tr>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+            <!--Tóm tắt-->
+            <tr>
+                <td  bgcolor="gray"><b>Tóm tắt</b></td>
+                <td>
+                    <textarea cols="40" rows="4"></textarea>
+                </td>
+            </tr>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+            <!--Nội dung-->
+            <tr>
+                <td  bgcolor="gray"><b>Nội dung</b></td>
+                <td>
+                    <textarea cols="40" rows="6"></textarea>
+                </td>
+            </tr>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+            <!--Hình ảnh-->
+           <tr>
+                <td  bgcolor="gray"><b>Hình ảnh</b></td>
+                <td><input type="file"></td>
+           </tr>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+            <!--Chú thích ảnh-->
+            <tr>
+                <td  bgcolor="gray"><b>Chú thích ảnh</b></td>
+                <td><input type="text" name="txtchuthich"></td>
+            </tr>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+            <!--Thêm-->
+            <tr>
+                <td colspan="2" align="center" bgcolor="gold">
+                    <input style="background-color: #9FD7F9;" type="submit" value="Thêm" onclick="alert('Xin chúc mình bạn đã thành công!')">
+                </td>
+            </tr>
+
+<!------------------------------------------------------------------------------------------------------------>            
+
+        </table>
+    </form>
+</body>
+</html>
+

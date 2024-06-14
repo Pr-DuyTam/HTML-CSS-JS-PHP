@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function change_background()
+        {
+            document.getElementById("a").style.background = 'yellow';
+        }
+
+        function change_color()
+        {
+            document.getElementById("a").style.color = 'red';
+        }
+
+        function change_height()
+        {
+            document.getElementById("a").style.height = 'px';
+        }
+    </script>
+</head>
+<body>
+    <div id="a">
+        <b>Cùng học JS</b>
+    </div>
+
+    <input type="button" value="Background" onclick="change_background()"/>
+    <input type="button" value="Color" onclick="change_color()"/>
+    <input type="button" value="Height" onclick="change_height()"/>
+    <input type="button" value="Fontsize" onclick="change_font_size()"/>
+</body>
+</html>

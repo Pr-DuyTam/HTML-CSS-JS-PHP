@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính giá trang trại heo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính giá trang trại heo</h1>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="so_luong">Số lượng heo:</label>
+            <input type="number" id="so_luong" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="can_nang">Cân nặng mỗi con (kg):</label>
+            <input type="number" id="can_nang" min="1" step="0.1" required>
+        </div>
+        <div class="form-group">
+            <label for="gia">Giá heo (VND/kg):</label>
+            <input type="number" id="gia" min="1" required>
+        </div>
+        <div class="form-group">
+            <button onclick="tinhThanhTien()">Tính thành tiền</button>
+        </div>
+        <div class="result" id="ket_qua"></div>
+    </div>
+
+    <script>
+        function tinhThanhTien() {
+            var soLuong = parseInt(document.getElementById("so_luong").value);
+            var canNang = parseFloat(document.getElementById("can_nang").value);
+            var gia = parseFloat(document.getElementById("gia").value);
+            var tongCanNang = soLuong * canNang;
+            var thanhTien = tongCanNang * gia;
+
+            document.getElementById("ket_qua").innerHTML = "Tổng cân nặng: " + tongCanNang + " kg<br>Thành tiền: " + thanhTien.toLocaleString() + " VND";
+        }
+    </script>
+</body>
+</html>

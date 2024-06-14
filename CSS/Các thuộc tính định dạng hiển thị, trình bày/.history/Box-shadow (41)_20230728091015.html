@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-shadow</title>
+
+    <style>
+        div{ /*Cái bóng cách cạnh trái của thẻ <div> là 25px, cách cạnh trên của thẻ <div> 15px, độ nhòe của bóng là 20px*/
+            box-shadow: 25px 15px 20px 10px red ;
+            background-color: blue;
+            margin: 30px;
+            width: 300px;
+            height: 150px;
+            border: 2px solid yellow;
+        }
+        div.a{
+            margin: 30px;
+            height: 150px;
+            width: 300px;
+            background-color: yellow;
+            border: 2px solid;
+            box-shadow: 25px 15px 20px 10px red, -30px -20px 15px greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div></div><hr>
+    <div class="a"></div>
+</body>
+</html>

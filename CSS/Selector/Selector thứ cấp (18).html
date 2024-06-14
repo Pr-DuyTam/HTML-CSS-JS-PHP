@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector thứ cấp</title>
+
+    <style>
+        #menu li{
+            color: red;
+            font-size: 20px;
+        }   /*Danh sách có "id=menu". Viết selector #menu li: có nghĩa là chọn tất cả các thẻ <li> trong thẻ HTML có id="menu" chịu tác động của CSS*/
+    
+        ul#web li{
+            color: blue;
+            background-color: yellow;
+        } /* Có thể viết ul#web li: có nghĩa chọn tất cả thẻ <li> trong thẻ HTML có id="web" */
+    </style>
+</head>
+<body>
+    <ul id="web">
+        <li>Web 1</li>
+        <li>Web 2</li>
+        <li>Web 3</li>
+    </ul>
+
+    <ul id="menu">
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+    </ul>
+</body>
+</html>

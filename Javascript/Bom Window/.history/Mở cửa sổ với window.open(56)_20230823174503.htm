@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.open()</title>
+</head>
+<body>
+    <script>
+        var a = null;
+        function open()
+        {
+            a = window.open('https://toidicode.com/doi-tuong-window-trong-javascript-142.html', "a", "width=500, height=500");
+            return false;
+        }
+    </script>
+    <div>Click vào button để xem kết quả</div>
+    <button type="button" onclick="open()">Mở cửa sổ</button>
+    <button type="button" onclick="close()">Đóng cửa sổ</button>
+</body>
+</html>

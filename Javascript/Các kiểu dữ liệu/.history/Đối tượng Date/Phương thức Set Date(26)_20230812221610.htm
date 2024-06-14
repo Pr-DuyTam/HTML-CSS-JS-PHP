@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các phương thức Set date</title>
+</head>
+<body>
+    <script>
+        var b = new Date();
+        document.write(b);
+
+        b.setDate(20); // Lấy ngày (1-31)
+
+        b.setFullYear(2011); // Lấy năm đầy đủ (YYYY)
+        b.setYear(20); // Lấy năm 2 số cuối (YY)
+
+        b.setHours(2); // Lấy số giờ (0-23)
+        b.setMilliseconds(10); // Lấy số mili giấy (0-999)
+
+        b.setMinutes(25); // Lấy số phút (0-59)
+        b.setMonth(10); // Lấy tháng (0-11)
+
+        b.getSeconds(); // Lấy số giây (0-59)
+        b.getTime(); // Thời gian đã được convert sang dạng miliseconds. 
+    </script>
+</body>
+</html>

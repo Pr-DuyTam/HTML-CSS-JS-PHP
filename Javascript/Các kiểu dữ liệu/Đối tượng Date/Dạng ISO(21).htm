@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO</title>
+</head>
+<body>
+    <!--
+        ISO: được lưu với dạng (YYYY-MM-DD) hay (YYYY-MM) hay (YYYY)
+        Lưu ý: không truyền đủ (ngày-tháng-năm-giờ-phút- giây) thì mặc định các tham số sẽ lấy thời gian nhỏ nhất. 
+    -->
+    <script>
+        var time1 = new Date("2019-11-20");
+        document.write(time1 + "<br/>");
+
+        var time2 = new Date("2019-11");
+        document.write(time2 + "<br/>");
+
+        var time3 = new Date("2019");
+        document.write( time3);
+    </script>
+</body>
+</html>

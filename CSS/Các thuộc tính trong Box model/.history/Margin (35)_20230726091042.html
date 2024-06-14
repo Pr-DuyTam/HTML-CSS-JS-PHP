@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    
+    <style>
+        div{
+            border: 2px solid red;
+        }
+
+        div p{
+            background: #ffffcc;
+            font-weight: bold;
+            margin: 10px 15px 25px 30px;
+        }
+
+        div.margin{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Thẻ p là con của thẻ div có lề cách thẻ div theo thứ tự kim đồng hồ <br> 
+            Lề trên: 10px <br>
+            Lề trái: 15px <br>
+            Lề dưới: 25px <br>
+            Lề phải: 30px
+        </p>
+    </div>
+
+    <div class="margin">
+        Thẻ div này nằm phía dưới và có lề trên là 40px
+    </div>
+</body>
+</html>

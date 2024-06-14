@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍnh giá tiền giặt đồ</title>
+
+    <script>
+        function tinh()
+        {
+            var giat1 = 0;
+            var ui1 = 0;
+            var hap1 = 0;
+
+            if(f.giat.checked == true)
+            giat1 = f.giat.value;
+            if(f.ui.checked == true)
+            ui1 = f.ui.value;
+            if(f.hap.checked == true)
+            hap1 = f.hap.value;
+        f.tien.value = (eval(giat1) + eval(hap1) + eval(ui1) * f.sokg.value);
+        }
+    </script>
+</head>
+<body>
+    <form name="f">
+        <table>
+            <tr>
+                <td>DỊCH VỤ</td><td align="right">ĐƠN GIÁ</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="giat" value="8000" checked>Giặt
+                </td>
+                <td align="right">8.000</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="hap" value="5000"/>Hấp
+                </td>
+                <td align="right">5.000</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="ui" value="30000"/>Ủi
+                </td>
+                <td align="right">30.000</td>
+            </tr>
+
+            <tr>
+                <td>Số kg</td>
+                <td>
+                    <input type="text" name="sokg" size="10" placeholder="Số kg">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tổng tiền</td>
+                <td>
+                    <input type="text" name="tien" size="10" disabled="true">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="button" name="Tinh" value="Tính" onclick="tinh()"/>
+                    <input type="button" name="xoa" value="Xóa" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

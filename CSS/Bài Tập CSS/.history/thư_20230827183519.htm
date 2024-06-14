@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trò chơi di chuyển hình vuông</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #game-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 1px solid #000;
+    }
+    #square {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #f00;
+      cursor: pointer;
+    }
+    #score {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trò chơi di chuyển hình vuông</h1>
+  <div id="game-container">
+    <div id="square"></div>
+  </div>
+  <div id="score">Điểm: 0</div>
+
+  <script>
+    var score = 0;
+    var gameContainer = document.getElementById("game-container");
+    var square = document.getElementById("square");
+
+    gameContainer.addEventListener("click", function() {
+      score++;
+      document.getElementById("score").textContent = "Điểm: " + score;
+    });
+
+    function moveSquare() {
+      var maxX = gameContainer.clientWidth - square.offsetWidth;
+      var maxY = gameContainer.clientHeight - square.offsetHeight;
+
+      var randomX = Math.floor(Math.random() * maxX);
+      var randomY = Math.floor(Math.random() * maxY);
+
+      square.style.left = randomX + "px";
+      square.style.top = randomY + "px";
+    }
+
+    setInterval(moveSquare, 1000);
+  </script>
+</body>
+</html>

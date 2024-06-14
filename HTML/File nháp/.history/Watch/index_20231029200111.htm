@@ -1,0 +1,190 @@
+<style>
+    :root {
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+      body {
+  background-color: hsl(223, 10%, 90%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+body,
+button {
+  color: var(--fg);
+  font: 1em/1.5 BlinkMacSystemFont, sans-serif;
+}
+
+.progress-clock {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  text-align: center;
+  width: 16em;
+  height: 16em;
+}
+
+.time-date,
+.time-digit,
+.time-colon,
+.time-ampm {
+  transition: color 0.2s linear;
+  user-select: none;
+}
+
+.time-date,
+.time-digit {
+  background: transparent;
+}
+
+.time-date,
+.time-ampm {
+  grid-column: 1 / 6;
+}
+
+.time-date {
+  font-size: 0.75em;
+  line-height: 1.33;
+}
+
+.time-digit,
+.time-colon {
+  font-size: 2em;
+  font-weight: 400;
+  grid-row: 2;
+}
+
+.time-colon {
+  line-height: 1.275;
+}
+
+.time-ampm {
+  cursor: default;
+  grid-row: 3;
+}
+
+.rings {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.ring {
+  opacity: 0.1;
+}
+
+.ring-fill {
+  transition:
+    opacity 0s 0.3s linear,
+    stroke-dashoffset 0.3s ease-in-out;
+}
+
+.ring-fill--360 {
+  opacity: 0;
+  stroke-dashoffset: 0;
+  transition-duration: 0.3s;
+}
+
+[data-group]:focus {
+  outline: transparent;
+}
+
+[data-units] {
+  transition: opacity 0.2s linear;
+}
+
+[data-group="d"]:hover {
+  color: hsl(333, 90%, 55%);
+}
+
+[data-group="h"]:hover {
+  color: hsl(33, 90%, 55%);
+}
+
+[data-group="m"]:hover {
+  color: hsl(213, 90%, 55%);
+}
+
+[data-group="s"]:hover {
+  color: hsl(273, 90%, 55%);
+}
+
+[data-group]:hover~.rings [data-units] {
+  opacity: 0.2;
+}
+
+[data-group="d"]:hover~.rings [data-units="d"],
+[data-group="h"]:hover~.rings [data-units="h"],
+[data-group="m"]:hover~.rings [data-units="m"],
+[data-group="s"]:hover~.rings [data-units="s"] {
+  opacity: 1;
+}
+</style>
+<div id="clock" class="progress-clock">
+    <button class="time-date" data-group="d" type="button">
+      <small data-unit="w">Sunday</small><br>
+      <span data-unit="mo">January</span>
+      <span data-unit="d">1</span>
+    </button>
+    <button class="time-digit" data-unit="h" data-group="h" type="button">12</button>
+    <span class="time-colon">:</span>
+    <button class="time-digit" data-unit="m" data-group="m" type="button">00</button>
+    <span class="time-colon">:</span>
+    <button class="time-digit" data-unit="s" data-group="s" type="button">00</button>
+    <span class="time-ampm" data-unit="ap">AM</span>
+    <svg class="rings" width="256" height="256" viewBox="0 0 256 256">
+      <defs>
+        <linearGradient id="pc-red" x1="1" y1="0.5" x2="0" y2="0.5">
+          <stop offset="0%" stop-color="hsl(343,90%,55%)" />
+          <stop offset="100%" stop-color="hsl(323,90%,55%)" />
+        </linearGradient>
+        <linearGradient id="pc-yellow" x1="1" y1="0.5" x2="0" y2="0.5">
+          <stop offset="0%" stop-color="hsl(43,90%,55%)" />
+          <stop offset="100%" stop-color="hsl(23,90%,55%)" />
+        </linearGradient>
+        <linearGradient id="pc-blue" x1="1" y1="0.5" x2="0" y2="0.5">
+          <stop offset="0%" stop-color="hsl(223,90%,55%)" />
+          <stop offset="100%" stop-color="hsl(203,90%,55%)" />
+        </linearGradient>
+        <linearGradient id="pc-purple" x1="1" y1="0.5" x2="0" y2="0.5">
+          <stop offset="0%" stop-color="hsl(283,90%,55%)" />
+          <stop offset="100%" stop-color="hsl(263,90%,55%)" />
+        </linearGradient>
+      </defs>
+  
+      <g data-units="d">
+        <circle class="ring" cx="128" cy="128" r="74" fill="none" opacity="0.1" stroke="url(#pc-red)" stroke-width="12" />
+        <circle class="ring-fill" data-ring="mo" cx="128" cy="128" r="74" fill="none" stroke="url(#pc-red)" stroke-width="12" stroke-dasharray="465 465" stroke-dashoffset="465" stroke-linecap="round" transform="rotate(-90,128,128)" />
+      </g>
+  
+      <g data-units="h">
+        <circle class="ring" cx="128" cy="128" r="90" fill="none" opacity="0.1" stroke="url(#pc-yellow)" stroke-width="12" />
+        <circle class="ring-fill" data-ring="d" cx="128" cy="128" r="90" fill="none" stroke="url(#pc-yellow)" stroke-width="12" stroke-dasharray="565.5 565.5" stroke-dashoffset="565.5" stroke-linecap="round" transform="rotate(-90,128,128)" />
+      </g>
+  
+      <g data-units="m">
+        <circle class="ring" cx="128" cy="128" r="106" fill="none" opacity="0.1" stroke="url(#pc-blue)" stroke-width="12" />
+        <circle class="ring-fill" data-ring="h" cx="128" cy="128" r="106" fill="none" stroke="url(#pc-blue)" stroke-width="12" stroke-dasharray="666 666" stroke-dashoffset="666" stroke-linecap="round" transform="rotate(-90,128,128)" />
+      </g>
+  
+      <g data-units="s">
+        <circle class="ring" cx="128" cy="128" r="122" fill="none" opacity="0.1" stroke="url(#pc-purple)" stroke-width="12" />
+        <circle class="ring-fill" data-ring="m" cx="128" cy="128" r="122" fill="none" stroke="url(#pc-purple)" stroke-width="12" stroke-dasharray="766.5 766.5" stroke-dashoffset="766.5" stroke-linecap="round" transform="rotate(-90,128,128)" />
+      </g>
+    </svg>
+</div>

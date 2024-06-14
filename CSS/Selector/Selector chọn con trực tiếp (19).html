@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector chọn con trực tiếp</title>
+
+    <style>
+        div.main > p /* Chọn ra thẻ <p> là con trực tiếp của thẻ <div> với class là main. Thẻ <p> có class="content" không bị tác động*/
+        {
+            color: red;
+            background-color: yellow;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <p>Là con trực tiếp của thẻ div.main</p>
+        <h4>Là con trực tiếp của thẻ div.main</h4>
+
+        
+        <div class="content">
+            <p>Con trực tiếp của div.content và là cháu của div.main </p>
+        </div>
+    </div>
+
+</body>
+</html>

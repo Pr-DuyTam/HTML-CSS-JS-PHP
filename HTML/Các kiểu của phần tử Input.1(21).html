@@ -1,0 +1,114 @@
+<h1  align="center">Các kiểu của phần tử &lt;Input&gt; 1</h1>
+
+<h3>1. Kiểu Text</h3>
+<form>
+    Họ tên <br>
+    <input type="text" name="txtHoten"> <br>
+    <!-- input có kiểu text tạo ra ô nhập chữ hiển thị dòng-->
+    <button type="button" onclick="alert('Xin chào')" > Ok</button>
+</form>
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>2. Kiểu passwork</h3>
+<form>
+    Tên đăng nhập <br>
+    <input type="text" name="txtname"> <br>
+    Mật khẩu <br>
+    <input type="password" name="txtpasswork" >
+    <button type="button" onclick="alert('Chào bạn!')">Nhấn vào</button>
+</form>
+<!--Kiểu passwork: tạo ra ô nhập passwork. Các ký tự nhập sẽ không hiển thị-->
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>3. Kiểu submit</h3>
+<form >
+    Tên đăng nhập <br>
+    <input type="text" name="txtTen"><br>
+    Mật khẩu <br>
+    <input type="password" name="txtpasswork">
+    <input type="submit" value="Đăng nhập" onclick="alert('Xin chào!')">
+</form>
+<!--Kiểu submit : dùng để tạo nút nhấn tác dụng gửi dữ liệu trên form đi-->
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>4. Kiểu reset</h3>
+<form action="">
+    Tên đăng nhập <br>
+    <input type="text" name="txtname"> <br>
+    Mật khẩu <br>
+    <input type="password" name="txtpasswork"> <br>
+    <input type="submit" value="Đăng nhập" onclick="alert('Xin chào!')">
+    <input type="reset" value="Hủy"> 
+</form>
+<!--Kiểu reset: tạo ra nút thiết lập các giá trị form về mặc định-->
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>5. Kiểu radio</h3>
+<form>
+    <input type="radio" name="gioitinh" value="0" checked>Nam <br>
+    <input type="radio" name="gioitinh" value="1">Nữ <br>
+</form>
+<!--
+    Kiểu radio: tạo ra nút chọn hình tròn
+    checked: mặc định chọn nút đó ban đầu
+-->
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>6. Kiểu checkbox</h3>
+<form>
+<fieldset>
+    <legend>Bạn quan tâm:</legend>
+    <input type="radio" name="chk1" value="html">HTML <br>
+    <input type="radio" name="chk2" value="CSS">CSS <br>
+    <input type="radio" name="chk3" value="JS">JS 
+</fieldset>
+<input type="submit" value="Nhập vào" onclick="alert('Xin chào!')">
+<input type="reset" value="Hủy"> 
+</form>
+<!--Kiểu checkbox: tạo ra một ô hình vuông. Cho phép người dùng chọn 1 hay nhiều sự lựa chọn khác nhau -->
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>7. Kiểu file</h3>
+<form>
+    Chọn file:
+    <input type="file">
+</form>
+<!--Kiểu file: tạo ra một hộp chọn tập tin, thường sử dụng khi upload file-->
+
+<!-------------------------------------------------------------------------->
+
+<hr>
+<h3>8.Kiểu button</h3>
+<form>
+    <input type="button" value="Hãy nhấn" onclick="alert('Xin chào!')">
+</form>
+<!--Kiểu button: Tạo ra một nút nhấn-->
+<!-------------------------------------------------------------------------->
+
+<hr>
+ <h3>9. Kiểu color</h3>
+ <form Chọn màu:>
+    <input type="color">
+ </form>
+<!--Kiểu color: Tạo ra một hộp chọn màu sắc-->
+ <!-------------------------------------------------------------------------->
+
+ <hr>
+ <h3>10. Kiểu number</h3>
+ <form>
+    Nhập điểm (0-10):
+    <input type="number" min="0" max="10">
+ </form>
+ <!--Kiểu number: tạo ra một ô nhập số. Tạo giới hạn giá trị của số nhập vào (min: nhỏ nhất ; max: lớn nhất)-->

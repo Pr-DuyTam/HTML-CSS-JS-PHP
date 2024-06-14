@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load</title>
+    <style>
+        button{
+            position: relative;
+            padding: 20px 50px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 200px;
+        }
+        span{
+            position: absolute;
+            z-index: 5;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: white;
+            text-shadow: 0 0 1px black;
+        }
+
+        .water{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 0;
+            top: -80px;
+            transition: 2s;
+            background-color: red;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+        }
+
+        .water::before,
+        .water::after
+        {
+            content: "";
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -75%);
+            background-color: #000;
+        }
+        .water::before
+        {
+            border-radius: 45%;
+            background-color: rgba(20, 20, 20, 1);
+            animation: shake 5s linear infinite;
+        }
+        .water::after
+        {
+            border-radius: 40%;
+            background-color: rgba(20, 20, 20, .5);
+            animation: shake 10s linear infinite;
+        }
+        button:hover .water{
+            top: -120px;
+        }
+        @keyframes shake
+        {
+            from{
+                transform: translate(-50%,-75%) rotate(0deg);
+            }
+            to
+            {
+                transform: translate(-50%,-75%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button>
+        <span>
+            Pr. Duy Tâm
+        </span>
+            <div class="water"></div>
+        
+    </button>
+</body>
+</html>

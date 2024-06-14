@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+
+    <style type="text/css">
+        #a{
+            background-color: yellow;
+            width:200px;
+            height: 80px;
+            border: 1px solid red;
+            position: absolute;
+            z-index: 10; /**/
+        }
+
+        #b{
+            background-color: pink;
+            height: 80px;
+            width: 200px;
+            position: absolute;
+            top: 60px;
+            left: 100px;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="position:relative">
+        <div id="a">Thẻ thứ 1</div>
+        <div id="b" align="bottom">Thẻ thứ 2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức clearTimeout</title>
+</head>
+<body>
+    <button type="button" onclick="a = setTimeout(b, 4000);">Bắt đầu</button>
+    <button type="button" onclick="clearTimeout(a)">Dừng lại</button>
+
+    <script>
+        function b (){
+            alert("Bạn là ai ai ai");
+        }
+    </script>
+</body>
+</html>
+<!--
+    clearTimeout: dùng để kết thúc việc thực thi của phương thức được thiết lập trong phương thức setTimeout
+
+    var ten_biến = setTimeout (function, milliseconds);
+    clearTimeout(tên_biến);
+-->

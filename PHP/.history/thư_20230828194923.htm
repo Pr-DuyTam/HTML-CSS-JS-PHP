@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang web bán heo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #total {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function calculateTotal() {
+      var price = parseFloat(document.getElementById('price').value);
+      var weight = parseFloat(document.getElementById('weight').value);
+      var shells = parseFloat(document.getElementById('shells').value);
+      
+      var total = price * weight - shells;
+      document.getElementById('total').textContent = 'Thành tiền: $' + total.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Trang web bán heo</h1>
+  </header>
+  <main>
+    <h2>Thông tin đặt hàng</h2>
+    <form>
+      <label for="price">Giá heo ($/kg):</label>
+      <input type="number" id="price" step="0.01" min="0" required>
+
+      <label for="weight">Số kí heo:</label>
+      <input type="number" id="weight" step="0.1" min="0" required>
+
+      <label for="shells">Số vỏ bắt heo ($):</label>
+      <input type="number" id="shells" step="0.01" min="0" required>
+
+      <button type="button" onclick="calculateTotal()">Tính thành tiền</button>
+    </form>
+
+    <p id="total"></p>
+  </main>
+</body>
+</html>

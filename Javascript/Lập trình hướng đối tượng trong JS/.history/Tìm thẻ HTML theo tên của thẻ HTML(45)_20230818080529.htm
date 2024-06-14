@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm thẻ Html theo tên thẻ HTML</title>
+</head>
+<body>
+    <input type="text" value="Lập trình web" >
+    <div>Học JS</div>
+    <div>Học CSS</div> <hr>
+
+    <script>
+        var a = document.getElementsByTagNameNS('input');
+        var b = document.getElementsByTagNameNS('div');
+        document.write(a[0].value + "<br>");
+        document.write(b[0].innerHTML);
+    </script>
+</body>
+</html>

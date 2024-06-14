@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm thẻ HTML theo cú pháp của Selector CSS</title>
+</head>
+<body>
+    <input type="text" value="Học HTML" class="a1">
+    <div>
+        <input type="text" value="JS" class="a2">
+        <input type="text" value="CSS"/>
+    </div>
+
+    <script>
+        var a = document.querySelectorAll("div input.a2");
+        document.write('<h3> Thẻ cần lấy: ' + a[1].value + '</h3>'); 
+    </script>
+</body>
+</html>

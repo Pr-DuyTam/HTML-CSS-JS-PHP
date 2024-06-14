@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin ứng viên</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table bgcolor="pink" border="0" cellpadding="0" height="150" align="center"  cellspacing="1">
+            <tr height="40" bgcolor="yellow">
+                <th colspan="2">
+                    <font color="red" size="5" face="Times New Roman">Thông tin ứng dụng</font>
+                </th>
+            </tr>
+            <tr>
+                <td width="140" align="center">Họ tên</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td align="center">Năm sinh</td>
+                <td>   
+                    <select name="ns">
+                        <option selected="selected">1990</option>
+                        <option>1991</option>
+                        <option>1992</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Giới tính</td>
+                <td>
+                    <input type="radio" name="gioitinh" value="0" checked>Nam
+                    <input type="radio" name="gioitinh" value="1">Nữ
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Hình thức làm việc</td>
+                <td>
+                    <input type="checkbox" name="1" value="html1">Toàn thời gian
+                    <input type="checkbox" name="2" value="html2">Bán thời gian
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Thông tin khác</td>
+                <td><textarea cols="40" rows="4"></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Gửi" onclick="alert('Xin chào!')">
+                    <input type="reset" value="Xóa" onclick="alert('Bạn đã xóa thành công')">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

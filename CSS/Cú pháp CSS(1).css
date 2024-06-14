@@ -1,0 +1,37 @@
+h1{
+    color: red;
+    text-transform: uppercase;
+}
+
+h2{
+    color: red;
+    text-transform: uppercase;
+}
+
+h3{
+    color: red;
+    text-transform: uppercase;
+}
+
+
+/* Ba thẻ h1,h2,h3 có cùng thuộc tính color và text-transform 
+Chúng ta có thể gom gọn lại như sau */
+
+h1,h2,h3{
+    text-transform: uppercase;
+    color: red;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Đối với một giá trị có khoảng trắng, chúng ta nên đặt tất cả trong một dấu ngoặc kép*/
+
+body{
+    font-family: "Times New Roman";
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*Đối với đơn vị đo, không nên đặt một khoảng cách giữa số đo với đơn vị của nó. */ 
+p{
+    width: 100 px; height: 200 px;
+}

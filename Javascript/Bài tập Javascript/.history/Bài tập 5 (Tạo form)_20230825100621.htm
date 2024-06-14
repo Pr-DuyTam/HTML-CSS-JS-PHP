@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Forms</title>
+    <script>
+        function validateForm() 
+        {
+            var tdn = document.getElementById("txtTDN").value;
+            var mk = document.getElementById("txtMK").value;
+            var xnmk = document.getElementById("txtXNMK").value;
+
+            if (tdn === "" || mk === "" || xnmk === "") 
+            {
+                alert("Các trường không được bỏ trống");
+                return false;
+            }
+
+            if (tdn.length < 6) 
+            {
+                alert("Tên đăng nhập phải có ít nhất 6 kí tự");
+                return false;
+            }
+
+            if (mk !== xnmk) 
+            {
+                alert("Mật khẩu và xác nhận mật khẩu không khớp");
+                return false;
+            }
+            return true;
+        }
+  </script>
+</head>
+<body align="center">
+    <form onsubmit="return validateForm()">
+        <table border="0" align="center">
+            <label for="txtTDN">Tên đăng nhập:</label> <!--Tạo nhãn cho phần tử đầu vào-->
+        <input type="text" id="txtTDN" name="txtTDN"><br>
+
+        <label for="txtMK">Mật khẩu:</label>
+        <input type="password" id="txtMK" name="txtMK"><br>
+
+        <label for="txtXNMK">Xác nhận mật khẩu:</label>
+        <input type="password" id="txtXNMK" name="txtXNMK"><br>
+
+        <input type="submit" value="Ok" name="btnDN">
+        <input type="reset"  value="Hủy">
+        </table>
+        
+  </form>
+</body>
+</html>

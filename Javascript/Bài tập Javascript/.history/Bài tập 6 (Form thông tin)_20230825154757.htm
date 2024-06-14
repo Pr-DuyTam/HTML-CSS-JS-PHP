@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form thông tin</title>
+</head>
+<body>
+    <form name="f">
+        <table border="0" cellpadding="5" cellspacing="0" width="498">
+            <tr>
+                <td colspan="2" align="center">THÔNG TIN ỨNG VIÊN</td>
+            </tr>
+
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" name="txtHoTen" size="28"></td>
+            </tr>
+            
+            <tr>
+                <td>Năm sinh</td>
+                <td>
+                    <select name="optNamSinh">
+                        <script>
+                            var a = new Date();
+                            for(i = a.getFullYear(); i >= 1950; i--)
+                            {
+                                document.write('<option value = "' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="radGioiTinh" value="Nam" checked="true"/>Nam
+                    <input type="radio" name="radGioiTinh" value="Nữ"/>nữ
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mức lương đề nghị</td>
+                <td><input type="text" name="txtMucLuong" onchange="kiemtraluong()"/></td>
+            </tr>
+
+            <tr>Hình thức làm việc</tr>
+        </table>
+    </form>
+</body>
+</html>

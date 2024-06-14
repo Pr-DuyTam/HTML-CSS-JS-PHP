@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị ngày tháng năm hiện tại</title>
+</head>
+<body>
+    <script>
+        Time();
+        function Time()
+        {
+            var today = new Date(); // Khởi tạo thòi gian hiện tại
+            var day = today.getDate();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear(); // Hiển thị năm với 4 chữ số
+            
+            var Times = today.getDay(); // lấy thứ của một đối tượng
+            switch(Times) // xác định 1 danh sách
+            {
+                case 0: Times = ""
+            }
+            document.write("Hôm nay là: " + Times + " ngày " + day + " tháng " + month + " năm " + year );
+        }
+    </script>
+</body>
+</html>

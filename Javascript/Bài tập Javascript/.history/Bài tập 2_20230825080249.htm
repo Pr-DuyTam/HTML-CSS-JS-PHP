@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+</head>
+<body>
+    <form name="c">
+        Hãy chọn màu nền:
+        <select name="optMauNen" onclick="document.bgColor=c.optMauNen.value">
+        <script language="Javascript">
+            var color = new Array('white','red','green','blue','magenta','yellow','cyan','pink');
+            for(var i in color)
+            {
+                document.write('<option value ="' + color[i] + '">' + color[i] + '</option>');
+            }
+        </script>
+        </select>
+    </form>
+</body>
+</html>

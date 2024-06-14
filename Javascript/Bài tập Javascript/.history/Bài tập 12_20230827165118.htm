@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính giá heo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính giá heo</h1>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="can_nang">Cân nặng (kg):</label>
+            <input type="number" id="can_nang" min="1" step="0.1" required>
+        </div>
+        <div class="form-group">
+            <button onclick="tinhGiaHeo()">Tính giá</button>
+        </div>
+        <div class="result" id="ket_qua"></div>
+    </div>
+
+    <script>
+        function tinhGiaHeo() {
+            var canNang = parseFloat(document.getElementById("can_nang").value);
+            var gia;
+
+            if (canNang <= 50) {
+                gia = canNang * 20000; // Giá 20.000 VND/kg
+            } else if (canNang <= 100) {
+                gia = canNang * 18000; // Giá 18.000 VND/kg
+            } else {
+                gia = canNang * 15000; // Giá 15.000 VND/kg
+            }
+
+            document.getElementById("ket_qua").innerHTML = "Giá heo là: " + gia.toLocaleString() + " VND";
+        }
+    </script>
+</body>
+</html>

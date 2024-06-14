@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pháo hoa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .firework {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+      animation: explode 1s linear forwards;
+    }
+
+    @keyframes explode {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
+  <script>
+    function createFirework() {
+      var firework = document.createElement('div');
+      firework.className = 'firework';
+      firework.style.left = Math.random() * window.innerWidth + 'px';
+      firework.style.top = Math.random() * window.innerHeight + 'px';
+      document.body.appendChild(firework);
+      setTimeout(function() {
+        firework.remove();
+      }, 1000);
+    }
+
+    function launchFireworks() {
+      setInterval(createFirework, 500);
+    }
+  </script>
+</head>
+<body onload="launchFireworks()">
+</body>
+</html>

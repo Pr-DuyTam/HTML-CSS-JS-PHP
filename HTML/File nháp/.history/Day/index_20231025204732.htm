@@ -1,0 +1,73 @@
+<style>
+    html, body {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(ellipse at center, #0a2e38 0%, #000 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    text-align: center;
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),
+                  0 0 20px rgba(10, 175, 230, 0);
+}
+
+.date {
+    letter-spacing: 0.1em;
+    font-size: 24px;
+}
+
+.time {
+    letter-spacing: 0.05em;
+    font-size: 80px;
+    padding: 5px 0;
+}
+
+.text {
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    padding: 20px 0 0;
+}
+</style>
+<div id="clock">
+    <p class="date"></p>
+    <p class="time"></p>
+    <p class="text">DIGITAL CLOCK with JavaScript</p>
+</div>
+<script>
+    const dayOfWeeks = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+const $time = document.querySelector('.time');
+const $date = document.querySelector('.date');
+
+function padStart(value, length) {
+    return String(value).padStart(length, '0');
+}
+
+function update() {
+    const now = new Date();
+    const [
+        hours, minutes, seconds,
+        year, month, date, day,
+    ] = [
+        now.getHours(), now.getMinutes(), now.getSeconds(),
+        now.getFullYear(), now.getMonth(), now.getDate(), now.getDay(),
+    ];
+    
+    $time.innerText = `${padStart(hours, 2)}:${padStart(minutes, 2)}:${padStart(seconds, 2)}`;
+    $date.innerText = `${padStart(year, 4)}-${padStart(month + 1, 2)}-${padStart(date, 2)} ${dayOfWeeks[day]}`
+}
+
+update();
+setInterval(update, 1000);
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 7</title>
+
+    <style>
+        body{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #menu ul{
+            background: #8ad385;
+            width: 250px;
+            padding: 0;
+            text-align: left;
+            list-style-type: none;
+        }
+
+        #menu li{
+            width: auto;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 1em;
+            border-bottom: 1px solid red;
+        }
+
+        #menu li a{
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+        }
+        #menu li:hover{
+            background: #cde2cd;
+        }
+
+        #menu ul li{
+            position: relative;
+        }
+        #menu .sub-menu{
+            position: absolute;
+            left: 250px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Tây Nam Bộ</a>
+                <li><a href="#">Đông Nam Bộ</a></li>
+        <ul class="sub-menu">
+            <li><a href="#">TP HCM</a></li>
+            <li><a href="#">Đồng Nai</a></li>
+            <li><a href="#">Bình Dương</a></li>
+        </ul>
+        </li>
+            
+            <li><a href="#">Nam Trung Bộ</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+

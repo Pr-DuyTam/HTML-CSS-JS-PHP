@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang web kiểm tra ngữ pháp tiếng Anh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question-text {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .answer-input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trang web kiểm tra ngữ pháp tiếng Anh</h1>
+
+  <div class="question">
+    <p class="question-text">Câu hỏi: She _____ to the store yesterday.</p>
+    <input class="answer-input" type="text" placeholder="Nhập đáp án">
+  </div>
+
+  <button class="submit-button">Kiểm tra</button>
+
+  <div class="result"></div>
+
+  <script>
+    const submitButton = document.querySelector(".submit-button");
+    const answerInput = document.querySelector(".answer-input");
+    const resultDiv = document.querySelector(".result");
+
+    submitButton.addEventListener("click", function() {
+      const answer = answerInput.value.toLowerCase();
+      if (answer === "went") {
+        resultDiv.textContent = "Chính xác!";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.textContent = "Sai!";
+        resultDiv.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+
+    <style type="text/css">
+        div.container{
+            border: 1px solid red;
+            padding: 10px;
+            width: 250px;
+            overflow:auto; /*Thanh scroll sẽ tự động hiển thị khi chiều cao cuae box không đủ chứa text*/
+        }
+
+        div.content{
+            background-color: yellow;
+            width: 250px;
+            height: 100px;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content"></div>
+    </div>
+
+    <div id="text">
+        <img src="./Ảnh/tải xuống.png" style="width: 400px;">
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector dựa vào ID</title>
+
+    <style>
+        #main{
+            color: red;    /* #main : là tìm thẻ HTML bất kỳ có id là main (gồm: HTML, CSS, JS )*/
+        }
+
+        div#main{
+            background-color: blue; /*  div#main : là tìm thẻ <div> bất kỳ có id là main (gồm: HTML) */
+        }
+
+        div #main{
+            font-size: 100px; /* div #main   : là tìm thẻ HTML bất kỳ có id là main và thẻ HTML đó phải là con của thẻ <div> (gồm: CSS và JS)*/
+        }
+
+        div p#main{
+            background-color: brown;
+            color: yellow;
+            height: 200px;          /* div p#main : là tìm thẻ <p> có id là main và thẻ <p> đó phải nằm trong thẻ <div> (JS)*/
+            width: 100px;
+        }
+
+        #web{
+            color: blue;
+            font-size: 25px;   /* Tìm thẻ có id là web*/
+        }
+    </style>
+</head>
+<body>
+    <div id="web">Web</div>
+    <div id="main">HTML</div>
+    <div> <h1 id="main">CSS</h1> </div>
+    <div> <p id="main">JS</p> </div>      
+</body>
+</html>

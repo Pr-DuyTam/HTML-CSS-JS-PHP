@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        table{
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            border-collapse: collapse; /*Loại bỏ khoảng trống giữa các đường viền (border) của table*/
+        }
+
+        table, th,td{
+            border: 1px solid red;
+        }
+
+        th.left{
+            width: 35%;
+            height: 40px;
+        }
+
+        th.right{
+            width: 650%;
+        }
+
+        tr:hover{ /*:hover: chọn các phần tử khi di chuyển chuột*/
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th class="left">Lớp</th>
+            <th class="right">
+                Học phần
+            </th>
+        </tr>
+
+        <tr>
+            <td>DH16TH</td>
+            <td>Lập trình thông tin</td>
+        </tr>
+
+        <tr>
+            <td>DH17TH</td>
+            <td>Lập trình web</td>
+        </tr>
+    </table>
+</body>
+</html>

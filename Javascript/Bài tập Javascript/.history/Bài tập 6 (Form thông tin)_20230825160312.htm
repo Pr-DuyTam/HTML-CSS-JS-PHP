@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form thông tin</title>
+    <script>
+        function kiemtraform()
+        {
+            if(f.txtHoTen.value == "")
+            {
+                alert('Tên không được trống');
+                f.txtHoTen.focus();
+                return false;
+            }
+
+            var d = new Date();
+            if (d.getFullYear() - f.optNamSinh.value < 16)
+            {
+                alert('Năm sinh không hợp lệ! Ứng viên phải từ 16 tuổi.');
+                f.optNamSinh.focus();
+                return false;
+            }
+
+            if((f.ckHinhThucToanTG.checked == false) && (f.ckHinhThucBanTG == false))
+            {
+                alert('Phải chọn ít nhất một hình thức làm việc');
+                return false;
+            }
+            hienthithongtin();
+            return true;
+        }
+
+        
+    </script>
+</head>
+<body>
+    <form name="f">
+        <table border="0" cellpadding="5" cellspacing="0" width="498">
+            <tr>
+                <td colspan="2" align="center">THÔNG TIN ỨNG VIÊN</td>
+            </tr>
+
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" name="txtHoTen" size="28"></td>
+            </tr>
+            
+            <tr>
+                <td>Năm sinh</td>
+                <td>
+                    <select name="optNamSinh">
+                        <script>
+                            var a = new Date();
+                            for(i = a.getFullYear(); i >= 1950; i--)
+                            {
+                                document.write('<option value = "' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="radGioiTinh" value="Nam" checked="true"/>Nam
+                    <input type="radio" name="radGioiTinh" value="Nữ"/>nữ
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mức lương đề nghị</td>
+                <td><input type="text" name="txtMucLuong" onchange="kiemtraluong()"/></td>
+            </tr>
+
+            <tr>
+                <td>Hình thức làm việc</td>
+                <td>
+                    <input type="checkbox" name="chkHinhThucToanTG" value="Toàn thời gian"/>Toàn thời gian
+                    <input type="checkbox" name="chkHinhThucBanTG" value="Bán thời gian"/>Bán thời gian
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thông tin khác</td>
+                <td>
+                    <textarea name="txtThongTin" cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Gửi" onclick="kiemtraform();"/>
+                    <input type="button" value="Xóa"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

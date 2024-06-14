@@ -1,0 +1,31 @@
+/*Xác định một đơn vị bằng cm*/
+div{
+    margin-bottom: 2cm;
+}
+
+/*Xác định một đơn vị bằng mm*/
+p{
+    padding: 20mm;
+}
+
+/*Xác định một đơn vị đo bằng inch, 1in = 96px = 2.54cm.*/
+p{
+    word-spacing: 15in
+}
+
+/* px: Đơn vị được dùng trên màn hình hiển thị, một px sẽ tương đương với một điểm ảnh trên màn hình, 1px = 1/96 in*/
+p{
+    padding: 20px;
+}
+
+/* pt: Định nghĩa đơn vị đo theo điểm. Đơn vị là point, cứ 1 inch = 72pt*/
+body{
+    font-size: 18px;
+}
+
+/* %: là đơn vị tham chiếu tỉ lệ % so với phần tử chứa nó. Ví dụ, có thẻ <div> có width: 500px và một thẻ <p> nằm bên trong thẻ
+<div> có width: 50% thì có nghĩa là thẻ <p> sẽ có width là 250px */
+p{
+    font-size: 16pt;
+    line-height: 125%;
+}

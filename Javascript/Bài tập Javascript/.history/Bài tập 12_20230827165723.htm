@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính số tiền và cân nặng heo</title>
+   <script>
+    
+   </script>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#inputForm {
+    margin-bottom: 20px;
+}
+
+#result {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+   </style>
+</head>
+<body>
+    <h1>Tính số tiền và cân nặng heo</h1>
+    
+    <div id="inputForm">
+        <label for="weight">Cân nặng heo (kg):</label>
+        <input type="number" id="weight" min="0">
+        <button onclick="calculate()">Tính</button>
+    </div>
+    
+    <div id="result" style="display: none;">
+        <p>Cân nặng heo: <span id="weightResult"></span> kg</p>
+        <p>Cân nặng vỏ: <span id="shellWeightResult"></span> kg</p>
+        <p>Số tiền: $<span id="priceResult"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

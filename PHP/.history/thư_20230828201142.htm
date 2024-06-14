@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang web kiểm tra và sửa ngữ pháp tiếng Anh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question-text {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .answer-input {
+      width: 400px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trang web kiểm tra và sửa ngữ pháp tiếng Anh</h1>
+
+  <div class="question">
+    <p class="question-text">Câu hỏi:</p>
+    <input class="answer-input" type="text" placeholder="Nhập câu cần kiểm tra và sửa">
+  </div>
+
+  <button class="submit-button">Kiểm tra và sửa</button>
+
+  <div class="result"></div>
+
+  <script>
+    const submitButton = document.querySelector(".submit-button");
+    const answerInput = document.querySelector(".answer-input");
+    const resultDiv = document.querySelector(".result");
+
+    submitButton.addEventListener("click", function() {
+      const sentence = answerInput.value.trim();
+      if (sentence === "") {
+        resultDiv.textContent = "Vui lòng nhập câu cần kiểm tra và sửa!";
+        resultDiv.style.color = "red";
+      } else {
+        const correctedSentence = correctGrammar(sentence);
+        resultDiv.innerHTML = `Câu đã nhập: ${sentence}<br/>Câu đã sửa: ${correctedSentence}`;
+        resultDiv.style.color = "black";
+      }
+    });
+
+    function correctGrammar(sentence) {
+      // Xử lý ngữ pháp và sửa câu ở đây
+      // Đây chỉ là một ví dụ đơn giản để minh họa
+      const words = sentence.split(" ");
+      const correctedWords = words.map(word => {
+        if (word === "is") {
+          return "am";
+        } else if (word === "are") {
+          return "am";
+        } else if (word === "am") {
+          return "is";
+        } else {
+          return word;
+        }
+      });
+      return correctedWords.join(" ");
+    }
+  </script>
+</body>
+</html>

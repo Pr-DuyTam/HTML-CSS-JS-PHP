@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm thẻ HTML theo tên class</title>
+</head>
+<body>
+    <input type="text" value="Nguyễn Khánh Duy Tâm" class="js">
+    <div class="web">Học  HTML</div>
+    <div class="web">Học CSS</div> <hr/>
+
+    <script>
+        var a = document.getElementsByClassName('js');
+        var b = document.getElementsByClassName('web');
+
+        document.write(a[0].value + "<br>");
+        document.write(b[0].innerHTML + "<br>");
+        document.write(b[1].innerHTML);
+    </script>
+</body>
+</html>

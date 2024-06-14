@@ -1,0 +1,106 @@
+<!--header: Phần đầu khung, chứa logo, benner...-->
+<!--nav: Phần chứa các phần liên kết định hướng toàn cục-->
+<!--section,article: Phần vùng chứa nội dung-->
+<!--sideber: Phần chứa nội dung phụ, ví dụ như quảng cáo-->
+<!--footer: phần chân cuối trang, thường chứa thông tin của tổ chức như địa chỉ, sdt...-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang web</title>
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Verdana, Tahoma;
+        }
+        /*Định dạng header*/
+        header
+        {
+            background-color: #999;
+            padding: 20px ;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px blue;
+        }
+        /*Định dạng phần nav bên trái*/
+        nav
+        {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 5px;
+        }
+        /*Định dạng phần aritcle*/
+        article
+        {
+            float: left;
+            width: 70%;
+            height: 300px;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+        sectiona:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        /*Định dạng footer*/
+        footer
+        {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+@media ( max-width: 600px)
+{
+    nav,article{
+        width: 100%;
+        height: auto;
+    }
+}    
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Đại học An Giang</h2>
+        &lt;header&gt;
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Sứ mạng</a></li>
+                <li><a href="#">Tầm nhìn</a></li>
+                <li><a href="#">Giá trị cốt lỗi</a></li>
+                <br>
+                &lt;aside&gt;
+            </ul>
+        </nav>
+        <article>
+            <h1>Sứ mệnh</h1>
+            <p>Sứ mạng của trường Đại học An Giang là trung tâm đào tạo nguồn nhân lực chất lượng cao, nghiên cứu khoa học và chuyển giao công nghệ có uy tín đóng góp vào sự phát triển kinh tế - xã hội của địa phương và của đất nước trong quá trình công nghiệp hóa, hiện đại hóa và hội nhập quốc tế.</p>
+            &lt;Section&gt;
+        </article>
+    </section>
+    <footer>
+        <p>Đại học An Giang
+            <br>
+            18 Ung văn Khiêm, Phường Đông Xuyên, TP.Long Xuyên - An Giang
+            <br>
+            &lt;footer&gt;
+        </p>
+    </footer> 
+</body>
+</html>
+
+

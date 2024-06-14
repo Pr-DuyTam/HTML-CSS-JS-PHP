@@ -1,0 +1,33 @@
+@keyframes orbit-cloud{
+    0% {filter: hue-rotate(0deg);}
+    100% {filter: hue-rotate(50deg);}
+}
+
+@keyframes orbit-nucleous{
+    0% {transform: rotateX(80deg) rotate(0deg);}
+    100% {transform: rotateX('80deg') rotate(360deg);}
+}
+
+@keyframes orbit-nucleous3{
+    0% {transform: rotateX(80deg) rotate(0deg) scale3d(var(--znt));}
+    100% {transform: rotateX(80deg) rotate(360deg) scale3d(var(--znt)) ;}
+}
+
+@keyframes orbit-nucleous-particle{
+    0% {transform: rotateX(90deg) rotateY(360deg) scale3d(0.75, 0.75, 0.75);}
+    100% {transform: rotateX(90deg) rotateY(0deg) scale3d(0.75, 0.75, 0.75);}
+}
+@keyframes orbit-spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes orbit-electron{
+    0% {transform: rotateX(80deg) var(--pos) rotate(0deg);}
+    100% {transform: rotateX(80deg) var(--pos) rotate(-360deg);}
+}
+
+@keyframes orbit-electron-particle{
+    0% {transform: rotateX(90deg) rotateY(-360deg);}
+    100% {transform: rotateX(90deg) rotateY(0deg);}
+}

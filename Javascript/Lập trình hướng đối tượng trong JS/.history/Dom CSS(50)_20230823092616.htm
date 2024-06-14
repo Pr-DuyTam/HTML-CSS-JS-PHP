@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CSS</title>
+</head>
+<body>
+    <script>
+// Thiết lập CSS bằng JS: document.getElementByID("object")
+        function change_background()
+        {
+            document.getElementById("message").style.background = 'pink';
+        }
+
+        function change_color()
+        {
+            document.getElementById("message").style.color = 'red';
+        }
+
+        function change_font_size()
+        {
+            document.getElementById("message").style.fontSize = '30px';
+        }
+
+        function change_height()
+        {
+            document.getElementById("message").style.height = '50px';
+        }
+    </script>
+
+    <div id="message">
+        Chào mừng bạn đã đến bình nguyên vô tận
+    </div>
+    <input type="button" value="Change background" onclick="change_background()"/>
+    <input type="button" value="Change color" onclick="change_color()"/>
+    <input type="button" value="Change height" onclick="change_height()"/>
+    <input type="button" value="Change fontSize" onclick="change_font_size()"/>
+</body>
+</html>

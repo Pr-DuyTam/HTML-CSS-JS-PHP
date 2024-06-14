@@ -1,0 +1,59 @@
+<!--Cú pháp của "Pseudo-classes"
+    selector: pseudo-class{
+        property: value;
+    }
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector dựa vào Pseudo-classes</title>
+
+    <style>
+        a:link /*Chọn thẻ <a> có liên kết chưa được click*/
+        {
+            color: red;
+            text-decoration: none; /* text-decoration: thiết lập các trang trí thêm cho text với "none" là định dạng văn bản bình thường */
+        }
+
+        a:visited /*Chọn tất cả thẻ <a> có liên kết đã truy cập */
+        {
+            color: black;
+            text-decoration: underline; /*underline: Xác định đường gạch bên dưới văn bản */
+        }
+
+        a:hover /*Chọn thẻ <a> có liên kết đang được di chuyển chuột lên*/
+        {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        a:active /*Chọn thẻ <a> có liên kết đang click chuột vào*/
+        {
+            color: white;
+            text-decoration: none;
+        }
+
+        a.agu:hover
+        {
+            color: #ff0000;
+            font-size: 25px;
+        }
+
+        a.cntt:hover /*Chọn tất cả thẻ <a> có liên kết đã truy cập */
+        {
+            color: blue;
+            text-decoration: line-through; /*line-through: Xác định đường gạch ngang văn bản */
+        }
+
+    </style>
+</head>
+<body>
+    <a>Lập trình Web</a>
+    <br>
+    <a class="agu">Đại học An Giang</a>
+    <br>
+    <a class="cntt">Công nghệ thông tin</a>
+</body>
+</html>
