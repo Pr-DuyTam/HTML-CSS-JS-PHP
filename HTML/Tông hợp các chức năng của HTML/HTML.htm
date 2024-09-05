@@ -50,7 +50,7 @@
                 <p onclick="alert('Xin chào!')" align="center">Hãy nhấn vào đây để hiện ra kết quả</p> <hr>
                 <p onclick='alert("Xin chào!")' align="center">Nhấn vào đây cũng được</p>
 
-                        <!--///////////////////////////////////////---Liên kết---///////////////////////////////////////// -->
+            <!------------------------------------------Liên kết------------------------------------------->
 
             <h3>b. Liên kết</h3>
             <a href="https://www.youtube.com/" target="_blank" title ="Đến trang Youtube">Xem Youtube</a> 
@@ -699,5 +699,109 @@
                 <h4>required: Bắt buộc nhập, không được bỏ trống </h4>
                 <h4>readonly: Không cho cập nhật</h4>
                 <h4>pattern : Mẫu biểu thức chính qui để kiểm tra giá trị hợp lệ</h4>
+<hr>
+            <h2>6. Multimedia</h2>
+
+            <h3>a. Kiểu &lt;video&gt;</h3>
+            <video width="500" height="340" controls>
+                <source src="../images/hoadep.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ
+            </video>
+    <!--
+            source : được dùng kèm bên trong thẻ <video> để liên kết tệp tin muốn nhúng
+            width và height: định dạng độ rộng và chiều cao của video
+            controls: cho phép người dùng điều khiển video (nút play, pause, volume)
+            autopplay: thiết lập cho video tự động chạy
+    --> 
+<hr>
+            <h3>b. Kiểu &lt;audio&gt;</h3>
+            <audio controls>
+                <source src="./01 1.mp3" type="audio/mpeg">
+                Trình duyệt hỗ trợ
+            </audio>
+            <!--
+                audio: để chèn nhạc vào trong web
+            -->
+<hr>
+            <h3>c. Chèn video từ youtube</h3>
+            <iframe height="300" width="400"
+                src="https://www.youtube.com/embed/oC0Wfdn3m4Y">
+            </iframe>
+           <!-- 
+            link youtube: https://www.youtube.com/watch?v=oC0Wfdn3m4Y
+                autoplay = 1: Tự động chạy (Mặc định là = 0)
+                loop = 1: Lặp vô hạn (Mặc định là = 0)
+                controls = 1: Hiển thị các nút điều khiển (Mặc định là =0)
+           -->
+<hr>
+            <h3>d. Hình tròn</h3>
+            <svg height="200" width="200">
+                <circle
+                    cx = "100"
+                    cy = "100"
+                    r = "90"
+                    stroke = "red"
+                    stroke-width = "5"
+                    fill = "pink"
+                />
+            </svg>
+            <!-- 
+                svg: vùng chứa cho các hình đồ họa như hình tròn, hình vuông...
+                circle: để tạo hình tròn
+                cx, cy: vị trí tâm của đường tròn
+                r: bán kính của đường tròn
+                stroke = "red": Màu sắc của đường tròn
+                stroke-width = "5": độ dày của đường tròn 5 pixels
+                fill = "pink": màu sắc bên trong hình vẽ
+            -->
+<hr>
+            <h3>e. Hình chữ nhật</h3> 
+            <svg height="120" width="200">
+                <rect
+                    width = "180"
+                    height = "100"
+                    stroke = "red"
+                    fill = "gray"
+                />
+            </svg>
+            <!--
+                rect: định nghĩa hình chữ nhật, hình vuông
+            -->
+<hr>        
+            <h3>h. Hình vuông</h3>
+            <svg width ="150" height="150">
+                <rect
+                    width= "150"
+                    height = "150"
+                    style="fill:blue;
+                        stroke: red;
+                        stroke-width: 10;
+                        fill-opacity: 0.6;
+                        stroke-opacity: 0.3;"
+                />
+            </svg>
+            <!--   
+                fill-opacity: 0.6; độ trong suốt của phần bên tronh hình vẽ
+                stroke-opacity: 0.3; độ trong suốt của viền hình vẽ
+             -->
+<hr>
+
+            <h3>j. Hình vuông bo tròn góc</h3>
+            <svg width="200" height="200">
+                <rect
+                    width="150" height="150"
+                    x="25" y="25" rx="30" ry="30"
+                    style="fill: yellow;
+                           stroke: black;
+                           stroke-width: 8;
+                           opacity: 0.5;"
+                />
+            </svg>
+            
+            <!-- 
+                opacity: Độ trong suốt tổng thể
+                x = "20" y="20": Xác định vị trí của góc trên bên trái của hình chữ nhật, cách mép trái và mép trên của vùng vẽ SVG lần lượt 20 pixel.
+                rx = "30" ry = "30": bán kính bo tròn của các góc của hình chữ nhật, biến HCN thành HV có góc bo tròn với bán kính là 30px
+            -->
 </body>
 </html>
