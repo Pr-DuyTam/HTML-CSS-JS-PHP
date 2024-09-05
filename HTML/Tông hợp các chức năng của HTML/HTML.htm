@@ -1,0 +1,703 @@
+<!--
+<!DOCTYPE html> : Đây là tài liệu HTML5
+<html> : thẻ HTML phần tử gốc bao ngoài cùng của trang web
+<head> : Phần đầu trang
+    <meta charset="UTF-8"> : khai báo bảng mã sử dụng cho trang web là utf-8 trang web Tiếng Việt
+    meta name="viewport": 
+    content="width=device-width: "content" dùng để gán giá trị tương ứng. "width=device-width" thiết lập độ rộng của trang phù hợp với độ rộng màn hình của thiết bị hiển thị.
+
+    initial-scale=1.0: thiết lập khởi tạo mức thu phóng khi trang được load lên lần đầu bởi trình duyệt.  
+    title: Dùng để đặt tiêu đề trang web, sẽ hiển thị trên thanh tiêu đề của cửa sổ trình duyệt.
+    body: Phần nội dung sẽ hiển thị trên cửa sổ trình duyệt
+-->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học HTML</title>
+    <style>
+      h2 {
+            text-decoration: underline; /* Gạch chân tất cả các thẻ h2 */
+            font-style: italic; /* In nghiêng tất cả các thẻ h2 */
+            color: red; /* Màu chữ đỏ cho thẻ h2 */
+        }
+        h3 {
+            color: red; /* Màu chữ đỏ cho thẻ h3 */
+        }
+        .container {
+            column-count: 2;
+            column-gap: 20px; /* Khoảng cách giữa hai cột */
+            
+        }
+       .title {
+            text-align: center;
+            margin-bottom: 10px;
+       }
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center">Học Ngôn Ngữ HTML</h1> <!--align="center": sẽ cho dòng chữ canh giữa-->
+
+            <!------------------------------------------1. Thuộc tính và Liên kết------------------------------------------>
+
+        <h2>
+            1. Thuộc tính & Liên kết
+        </h2>
+            <h3>a. Có 2 cách để click hiện ra thông báo</h3>
+                <p onclick="alert('Xin chào!')" align="center">Hãy nhấn vào đây để hiện ra kết quả</p> <hr>
+                <p onclick='alert("Xin chào!")' align="center">Nhấn vào đây cũng được</p>
+
+                        <!--///////////////////////////////////////---Liên kết---///////////////////////////////////////// -->
+
+            <h3>b. Liên kết</h3>
+            <a href="https://www.youtube.com/" target="_blank" title ="Đến trang Youtube">Xem Youtube</a> 
+            <!--
+                <a>: để tạo liên kết, và "href" là thuộc tính bắt buộc có để liên kết hoạt động
+                tagret_blank: Mở liên kết đó qua 1 cửa sổ mới
+                title: mô tả thêm thông tin liên kết
+            -->
+
+            <!------------------------------------------Liên kết trong tài liệu------------------------------------------>
+
+            <h3>c. Liên kết trong cùng tài liệu</h3>
+    <h1 align="center">Đại học An Giang</h1>
+        <ul>
+            <li><a href="#khoasupham">Khoa sư phạm</a></li>
+            <li><a href="#khoakythuat">Khoa kỹ thuật</a></li>
+            <li><a href="#khoanongnghiep">Khoa nông nghiệp</a></li>
+            <!--Khi click chuột vào 1 liên kết, trang web sẽ cuộn đến phần nội dung tương ứng. Ví dụ khi click vào liên kết Sứ mạng, trang sẽ cuộn đến phần được đánh bookmark tên sumang-->
+        </ul>
+        <a name="khoasupham"></a>
+        <h4>Khoa sư phạm</h4>
+            <p>Đến ngày 30 tháng 12 năm 1999, theo Quyết định số 241/1999/QĐ-TTg của Thủ tướng Chính Phủ, trường Đại học An Giang được thành lập trên cơ sở trường Cao đẳng Sư phạm An Giang, trong đó Khoa Sư phạm là một trong bốn Khoa được thành lập đầu tiên: Khoa Sư phạm, Khoa Nông nghiệp - Tài nguyên Thiên nhiên; Khoa Công nghệ - Kỹ thuật Môi trường; Khoa Kinh tế Quản trị Kinh doanh.
+                Khoa được mở 3 ngành đại học đầu tiên/ tổng số 5 ngành đại học được mở trong năm học 2000-2001: Sư phạm Ngữ Văn, Sư phạm Toán, Sư phạm Ngoại ngữ; các năm tiếp theo sau đó, các ngành được mở đào tạo như ngành Sư phạm Vật lý, Sư phạm Hóa học (2001-2002);
+                ngành Sư phạm Sinh và Sư phạm Lịch sử (2002-2003); Sư phạm Địa lý (2004-2005); Sư phạm Giáo dục Tiểu học (2005-2006). Như vậy, tính đến năm học 2015-2016, Khoa đào tạo 9 ngành hệ đại học sư phạm chính quy như Sư phạm Toán, Vật lý, Hóa học, Sinh, Ngoại ngữ, Ngữ văn, Lịch sử, Địa lý và Giáo dục Tiểu học.
+                Cùng với các ngành đại học, Khoa còn đào tạo các  ngành Cao đẳng Sư phạm như Sư phạm Toán - Tin; Lý - Tin; Lý - KTCN; Hóa - Sinh; Sinh - KTNN; Văn - TV - Sử; Văn - TV - GDCD; Sử - Địa; Sử - GDCD; Địa - Sử; GDCD - Sử; Tiếng Anh; Giáo dục Tiểu học; Giáo dục Mầm non.
+                Đến năm học 2007-2008, Khoa ngừng tuyển sinh một số ngành Cao đẳng Sư phạm, trừ các ngành: Sư phạm Tiếng Anh, Giáo dục Tiểu học; Giáo dục Mầm non và Tin học.
+            </p>
+
+        <a name="khoakythuat"></a>
+        <h4>Khoa kỹ thuật</h4>
+            <p>
+                Đào tạo Cử nhân Kỹ thuật phần mềm có khả năng thiết kế các phần mềm theo đúng qui trình sản xuất phần mềm; có năng lực tham mưu, tư vấn và khả năng tổ chức thực hiện nhiệm vụ của một chuyên viên trong lĩnh vực kỹ thuật phần mềm. Trong quá trình học, sinh viên được trang bị kiến thức về quy trình xây dựng, quản lý và bảo trì hệ thống phần mềm.
+                Sau khi tốt nghiệp, sinh viên sẽ thành công trong việc phân tích, thiết kế phần mềm; có đủ khả năng để làm việc tại các công ty sản xuất phần mềm.
+                Ngoài ra, Khoa còn đào tạo ngành Cử nhân Công nghệ thông tin hệ vừa làm vừa học. Trong thời gian tới Khoa sẽ tiếp tục mở các ngành đào  tạo: Văn bằng 2 cử nhân Công nghệ thông tin, Liên thông từ Trung cấp lên Đại học ngành Công nghệ thông tin; Liên thông từ Cao đẳng lên Đại học ngành Công nghệ thông tin.
+                Ngoài công tác giảng dạy, các cán bộ của Khoa tập trung vào công tác nghiên cứu khoa học và ứng dụng công nghệ (ưu tiên nghiên cứu các lĩnh vực mang tính ứng dụng cao vào đời sống của người dân tỉnh An Giang và Đồng bằng sông Cửu Long) thuộc lĩnh vực công nghệ thông tin.
+            </p>
+
+        <a name="khoanongnghiep"></a>
+        <h4>Khoa nông nghiệp</h4>
+            <p>
+                Tính đến tháng 6 năm 2021, Khoa có 351 bài báo đăng trên các tạp chí trong và ngoài nước; thực hiện 302 dự án được tài trợ từ nhiều nguồn khác nhau. Trong đó 1 đề tài cấp Bộ; 6 dự án cấp tỉnh; 29 dự án sơ cấp; 169 dự án đại học; 16 dự án TRIG do Bộ Giáo dục và Đào tạo (MOET) tài trợ; 42 dự án của MEKARN
+                (Mạng lưới nghiên cứu động vật lưu vực sông Mê Kông) và các dự án từ các dự án khác hợp tác với nước ngoài. Hiện tại, khoa đang thực hiện 51 đề tài (1 cấp Bộ, 6 cấp tỉnh, 5 cấp cơ sở, 12 cấp đại học, 5 cấp khoa và 22 đề tài nghiên cứu khoa học sinh viên).
+                Khoa cũng đã thực hiện các dự án hợp tác quốc tế như: Dự án mạng lưới các trường đại học đất ngập nước; Dự án NICHE; Dự án Mekarn; Dự án dịch vụ hệ sinh thái (do SIDA / Thụy Điển tài trợ); Dự án Biotrop / SEAMEO; Dự án JICA; Dự án Living Delta (Vương quốc Anh) từ năm 2020-2025.
+            </p>
+
+
+            <!------------------------------------------2. Các thẻ HTML Cơ bản------------------------------------------>
+
+<hr>
+        <h2>2. Các thẻ cơ bản HTML</h2>
+            <h3>a. Dấu ngắt và các khối lệnh</h3>
+                <h4 style="color: red; text-indent: 2em;">2a. Dấu ngắt (pre)</h4>
+<!-- <pre>: Ngắt dòng như thế nào thì sẽ hiển thị nội dung như thế ấy -->
+            <pre>
+                Con cò bé bé
+                Nó đậu cành tre
+                Đi không hỏi mẹ
+                Biết đi đường nào
+            </pre>
+
+                <h4 style="color: red; text-indent: 2em;">2b. Thẻ &lt;div&gt;</h4>
+                <!-- <div> dùng để xác định 1 khối, 1 bộ phận trên trang, thường dùng như vật chứa các phần tử HTML khác -->
+                    <div style="background-color: pink; padding: 20px;">Khối thứ nhất</div>
+                    <div style="background-color: rgb(128, 128, 128); padding: 20px;">Khối thứ hai</div>
+
+                    <h4 style="color: red; text-indent: 2em;">2c. Thẻ &lt;span&gt;</h4>
+                <!-- <span> phần tử trên dòng, nghĩa là các phần tử xuất hiện trước và sau nó sẽ hiển thị trên cùng 1 dòng nếu đủ khoảng trống  -->
+                    <p>Tôi yêu 
+                        <span style="background-color: aqua;">
+                            bạn của tôi và những người xung quanh
+                        </span>
+                        vì họ xứng đáng được như vậy.
+                    </p>
+
+            <!------------------------------------------Các thẻ bố cục trang------------------------------------------>
+
+<hr>
+            <h3>b. Các thẻ bố cục trang</h3>       
+            
+<!--header: Phần đầu khung, chứa logo, benner...-->
+<!--nav: Phần chứa các phần liên kết định hướng toàn cục-->
+<!--section,article: Phần vùng chứa nội dung-->
+<!--sideber: Phần chứa nội dung phụ, ví dụ như quảng cáo-->
+<!--footer: phần chân cuối trang, thường chứa thông tin của tổ chức như địa chỉ, sdt...-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang web</title>
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Verdana, Tahoma;
+        }
+        /*Định dạng header*/
+        header
+        {
+            background-color: #999;
+            padding: 20px ;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px blue;
+        }
+        /*Định dạng phần nav bên trái*/
+        nav
+        {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 5px;
+        }
+        /*Định dạng phần aritcle*/
+        article
+        {
+            float: left;
+            width: 70%;
+            height: 300px;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+        sectiona:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        /*Định dạng footer*/
+        footer
+        {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media ( max-width: 600px)
+        {
+            nav,article{
+                width: 100%;
+                height: auto;
+            }
+        }    
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Đại học An Giang</h2>
+        &lt;header&gt;
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Sứ mạng</a></li>
+                <li><a href="#">Tầm nhìn</a></li>
+                <li><a href="#">Giá trị cốt lỗi</a></li>
+                <br>
+                &lt;aside&gt;
+            </ul>
+        </nav>
+        <article>
+            <h1>Sứ mệnh</h1>
+            <p>Sứ mạng của trường Đại học An Giang là trung tâm đào tạo nguồn nhân lực chất lượng cao, nghiên cứu khoa học và chuyển giao công nghệ có uy tín đóng góp vào sự phát triển kinh tế - xã hội của địa phương và của đất nước trong quá trình công nghiệp hóa, hiện đại hóa và hội nhập quốc tế.</p>
+            &lt;Section&gt;
+        </article>
+    </section>
+    <footer>
+        <p>Đại học An Giang
+            <br>
+            18 Ung văn Khiêm, Phường Đông Xuyên, TP.Long Xuyên - An Giang
+            <br>
+            &lt;footer&gt;
+        </p>
+    </footer> 
+</body>
+</html>
+            <!------------------------------------------Các thẻ định dạng------------------------------------------>
+
+<hr>
+            <h3>c. Các thẻ định dạng</h3>
+            <p>Chữ <b>in đậm</b></p> <!--Thẻ <b>: In đậm-->
+                <p>Chữ <i>in nghiên</i></p> <!--Thẻ <i>: In nghiện-->    
+                <p>Chữ <u>gạch dưới</u></p> <!--Thẻ <u>: gạch dưới-->    
+                <p>Chữ <strong>đánh dấu quan trọng</strong></p> <!--Thẻ <strong>: In đậm, cho các phần văn bản quan trọng-->   
+                <p>Chữ <em>được nhấn mạnh</em></p> <!--Thẻ <em>: In nghiện các phần văn bản quan trọng --> 
+                <p>Chữ <del>chữ bị xóa</del></p> <!--Thẻ <del>: chữ bị xóa-->
+                <p>Chữ <ins>chữ chèn mới</ins></p> <!--Thẻ <ins>: Chữ chèn mới(thường hiển thị dạng gạch chân)-->        
+                <p>Chữ <small>có kích thước nhỏ</small></p> <!--Thẻ <small>: kích thước chữ nhỏ-->            
+                <p>Chữ <mark>được đánh dấu</mark></p> <!--Thẻ <mark>: chữ được đánh dấu-->
+                <p>Chữ dạng chỉ số trên: y<sup>2</sup> </p><!--Dạng chỉ số trên--> 
+                <p>Chữ dạng chỉ số dưới: H<sub>2</sub>SO<sub>4</sub></p> <!--Dạng chỉ số dưới-->    
+                
+            <!------------------------------------------3. Danh sách------------------------------------------>
+<hr>
+        <h2>3. Danh sách</h2>
+            <h3>a. Danh sách theo thứ tự</h3>
+                <h4 style="color: red; text-indent: 2em;">* Thẻ &lt;ol&gt;, &lt;li&gt;, &lt;ul&gt; </h4>
+            <!-- Danh sách có thứ tự được đặt trong <ol>, phần tử danh sách được bắt đầu với <li>
+                type = "A": đánh dấu A, B, C...
+                type = "a: đánh dấu a, b, c...
+                type = "i": đánh dấu i, ii, iii...
+                start: Số thứ tự bắt đầu đánh dấu
+            -->
+                <div class="container">
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>C++</li>
+                    </ol>
+            
+                    <ol type="I" start="2">
+                        <li>Type = "A": đánh dấu A, B, C...</li>
+                        <li>Type = "a: đánh dấu a, b, c...</li>
+                        <li>Type = "i": đánh dấu i, ii, iii...</li>
+                    </ol>
+    
+                </div>
+                
+            <!------------------------------------------Danh sách không theo thứ tự------------------------------------------>
+<hr>            
+            <h3>b. Danh sách không theo thứ tự</h3>
+            <!-- Danh sách có thứ tự được đặt trong <ul>, phần tử danh sách được bắt đầu với <li>. 
+                Dùng style= "list-styple-type" với các giá trị sau:
+                disc: Hình dấu chấm tròn đặc (mặc định)
+                circle: Hình dấu tròn rỗng
+                square: Hình dấu vuông
+                none: Không dùng dấu hoa thị
+            -->
+                <div class="container">
+                    <ul>
+                        <li>HTML</li>
+                        <li>JS</li>
+                        <li>CSS</li>
+                    </ul>
+
+                    <ul style="list-style-type: square;">
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                   
+            <!------------------------------------------Danh sách Mô tả------------------------------------------>
+
+<hr>            
+            <h3>c. Danh sách mô tả</h3>
+            <!--Danh sách các từ khóa cùng với phần mô tả kèm với các từ khóa đó
+                
+                    Danh sách được bắt đầu với thẻ <dl>
+                    Tên các từ bắt đầu với thẻ <dt>
+                    Phần mô tả được bắt đầu với thẻ <dd>
+            -->
+            <dl>
+                <dt>HTML</dt>
+                <dd>Hyper Text Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheet</dd>
+            </dl>
+
+            <!------------------------------------------Danh sách Lồng nhau------------------------------------------>
+
+<hr>            
+            <h3>d. Danh sách lồng nhau</h3>
+            <!-- Các loại danh sách có thể lồng với nhau, mỗi mục trong danh sách có thể chứa một sách dách khác -->
+                <p><b>CÁC PHẦN TỬ FORM</b></p>
+                <ol>
+                    <li>Phần tử &lt;Input&gt;
+                        <ul>
+                            <li>Kiểu text</li>
+                        </ul>
+                        <ul>
+                            <li>Kiểu radio</li>
+                        </ul>
+                        <ul>
+                            <li>Kiểu checkbox</li>
+                        </ul>
+                    </li>
+
+                    <li>Phần tử &lt;select&gt;</li>
+                    <li>Phần tử &lt;textarea&gt;</li>
+                </ol>
+<hr>
+            <!------------------------------------------4. Bảng------------------------------------------>
+
+        <h2>4. Bảng và Hình ảnh</h2>
+            <h3>a. Thẻ để tạo bảng và định dạng bảng</h3>
+            <!-- table: định nghĩa bảng
+                 tr: định nghĩa dòng
+                 th: định nghĩa ô tiêu đề
+                 td: định nghĩa ô dữ liệu
+
+                border: độ dày đường viền bảng, tính theo pixel
+                width: độ rộng bảng, tính pixel hay %
+                cellpadding: khoảng cách từ đường viền đến nội dung
+                cellspacing: Khoảng cách giữa các ô
+            -->
+            <div class="container">
+                 <table border="1" cellpadding="10" cellspacing="0" width="300px">
+                    <tr>
+                        <th>Tên</th>
+                        <th>Lớp</th>
+                        <th>MSSV</th>
+                    </tr>
+                    <tr>
+                        <td>Nguyễn Anh Tú</td>
+                        <td>10a2</td>
+                        <td>1812001</td>
+                    </tr>
+                    <tr>
+                        <td>Nguyễn Văn A</td>
+                        <td>11a5</td>
+                        <td>1812002</td>
+                    </tr>
+                 </table>
+    
+                 <table border="1" cellpadding="10" cellspacing="0" style="background-color: red; color: white;">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                 </table>
+            </div>     
+<hr>
+            <!------------------------------------------Ghép ô cùng dòng và cột------------------------------------------>
+
+            <h3>b. Ghép ô cùng dòng và ghép ô cùng cột</h3>
+            <!-- Để ghép ô liền kề trên cùng dòng, tức là các ô liền kề khác cột, ta sử dụng thuộc tính: 
+                colspan = "số ô muốn ghép" 
+            -->
+                
+            <div class="container">
+                <div class="title">Ghép ô cùng dòng
+                <table border="1" cellpadding="10" style="margin: auto;">
+                    <tr>
+                        <td>1</td>
+                        <td colspan="3">2</td> 
+                        <!-- ta muốn ghép ô số 2 và ô số 3 thì ở ô số 2 ta đặt "colspan và xóa ô số 3" -->
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                </table>
+                </div>
+                <!-- Để ghép ô liền kề cùng cột, tức là các ô liền kề ở các dòng khác nhau,ta sử dụng thuộc tính:
+                    rowspan = "số ô muốn ghép"
+                -->
+                <div class="title">Ghép ô cùng cột
+                <table border="1" cellpadding="10" style="margin: auto;">
+                    <tr>
+                        <td rowspan="3">1</td> 
+                        <!-- ghép ô 1, 4, 7 thì ô số 1 đặt thuộc tính rowspan và xóa ô 4, 7 -->
+                        <td>2</td> 
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+
+<hr>
+            <!------------------------------------------Hình ảnh------------------------------------------>
+
+            <h3>c. Hình ảnh</h3>
+<!--src: tham chiếu đến tập tin ảnh, có thể là đường link hay một địa chỉ web nếu ảnh chứa có sever hợp với ảnh
+    alt: chữ hiển thị thay thế khi không xem ảnh được
+    width, hight: độ rộng và độ cao hiển thị ảnh
+-->
+            <img src="../images/hinh2.jpg" alt="Hoa sen" style="width: 400px; border: thin solid red; margin: auto; display: block  ;">
+
+
+
+            <!------------------------------------------FORM------------------------------------------>
+
+<!--form : Để tạo form ta dùng thẻ <form>
+    legend : Hiển thị tiêu đề của nhóm thành phần
+    fieldset : Nhóm các thành phần có liên quan trên form
+    action : Chỉ định hành động sẽ được thực thi khi form được gửi đi
+-->
+<hr>
+            <h2>5. Tạo Form</h2>
+            <form action="xuly.php">
+                <fieldset>
+                    <legend>Tìm kiếm</legend>
+                    Nhập từ khóa: <br>
+                    <input type="search" name="txttukhoa">
+                    <input type="submit" name="btntim" value="Tìm kiếm">
+                </fieldset>
+            </form>
+
+<!-- input : có thể hiển thị nhiều dạng phần tử nhập khác nhau tùy thuộc vào thuộc tính 'type' 
+    (mặc định nếu không gán thuộc tính 'type' thì <input> có kiểu text). Thuộc tính của <input> gồm:
+    
+    name  : tên phần tử
+    type  : kiểu phần tử
+    value : giá trị
+    size  : kích thước phần tử
+    maxlength : độ dài tối đa (đối với kiểu text)
+    checked : được chọn (đối với kiểu radio, checkbox)
+    src  : nguồn ảnh (đối với kiểu image) 
+-->
+            <!------------------------------------------SELECT------------------------------------------>
+
+            <h3>a. Phần tử &lt;select&gt; </h3>
+
+            <div class="container">
+                <select name="monhoc" size="4"> <!--Danh sách chọn hiển thị nhiều mục lựa chọn, ta có thể đặt thêm thuộc tính "size" cho thẻ "select"-->
+                    <option value="TA1">Tiếng Anh</option>
+                    <option value="TT1">Tiếng Trung</option>
+                    <option value="TP1" selected>Tiếng Pháp</option>
+                    <option value="TN1">Tiếng Nhật</option>
+                    <option value="TV1">Tiếng Việt</option>
+                </select>
+
+                <select name="monhoc">
+                    <option value="TA1">Tiếng Anh</option>
+                    <option value="TT1">Tiếng Trung</option>
+                    <option value="TP1" selected>Tiếng Pháp</option>
+                </select>
+
+                <select name="monhoc" size="4" multiple> <!--"multipple cho phép chọn nhiều mục trong danh sách cùng lúc"-->
+                    <option value="TA1">Tiếng Anh</option>
+                    <option value="TT1">Tiếng Trung</option>
+                    <option value="TP1" selected>Tiếng Pháp</option>
+                    <option value="TN1">Tiếng Nhật</option>
+                    <option value="TV1">Tiếng Việt</option>
+                </select>
+            </div>
+            
+<!-- Phần tử "select" được tạo ra dạng hợp thả. Mỗi 1 mục chọn trong danh sách được tạo bằng thẻ "option". Nếu muốn đặt 1 mục nào đó là được chọn sẵn khi trang mới tả 
+            ta dùng thuộc tính "selected" vào thẻ "option" tương ứng
+-->
+            <!------------------------------------------TEXTAREA------------------------------------------>
+
+<hr>
+            <h3>b. Phần tử &lt;textarea&gt; </h3>
+                <textarea rows="5" cols="50">Chúng ta bị tổn thương đó chính là do suy nghĩ của chúng ta, và cũng chính suy nghĩ của chúng ta mới chữa lành được.</textarea>
+            <!-- "textarea" dùng để tạo ra trường nhập văn bản gồm nhiều dòng.
+                "rows" đặt số dòng hiển thị             
+                "cols" đặt độ rộng hiển thị
+            --> 
+
+            <!------------------------------------------BUTTON------------------------------------------>
+
+<hr>
+            <h3>c. Phần tử &lt;button&gt; </h3>
+            <!-- "Button" dùng để tạo ra một nút nhấn -->
+            <button onclick="alert('Xin chào Peter!')" type="button">
+                Hãy nhấn vào đây
+            </button>
+
+            <!------------------------------------------DATALIST------------------------------------------>
+<hr>
+            <h3>d. Phần tử &lt;datalist&gt; </h3>
+            <!-- Khi người dùng gõ 1 hay vài ký tự vòa ô nhập, thì danh sách sẽ gợi ý những tùy chọn phù hợp tương ứng để người dùng chọn
+            Lưu ý: thuộc tính list của phần tử "input" phải tham chiếu đến thuộc tính "id" của "datalist" 
+            -->
+            <form>
+                <input list="season">
+                    <datalist id="season">
+                        <option value="red"></option>
+                        <option value="blue"></option>
+                        <option value="white"></option>
+                    </datalist>
+            </form>
+<hr>
+            <!------------------------------------------OUTPUT------------------------------------------>
+
+            <h3>e. Phần tử &lt;output&gt; </h3>
+            <!-- "output" dùng để hiển thị kết quả của 1 tính toán -->
+             <form oninput="ketqua.value = parseInt(num1.value) + parseInt(num2.value)"> <!--parsaInt(num1/2.value) để chuyển giá trị input thành số nguyên-->
+                <input type="number" id="num1" value="100" name="a"> +
+                <input type="number" id="num2" value="100" name="b"> =
+
+                <output name="ketqua" for="num1 num2"> <!--Liên kết input num1 và num2-->
+                </output>
+             </form>
+<hr>
+            <!------------------------------------------TEXT - PASSWORD - SUBMIT------------------------------------------>
+
+            <h3>h. Kiểu &lt;text&gt; - &lt;password&gt; - &lt;submit&gt; - &lt;reset&gt;</h3>
+            
+            <form action="xuly.php" method="post"> 
+                Tên đăng nhập: <br>
+                <input type="text" name="txttext"> <br> <!--"input" có kiểu "text" sẽ tạo ra 1 ô nhập chữ hiển thị 1 dòng-->
+                Mật khẩu: <br>
+                <input type="password" name="txtpassword"> <!--"input" có kiểu "password" sẽ tạo ra 1 ô nhập mật khẩu-->
+                <br> <br>
+                <input type="submit" value="Đăng nhập"> <!--"input" có kiểu "submit" sẽ tạo ra 1 nút nhấn có tác dụng gửi dữ liệu trên form đi-->
+                <input type="reset" value="Hủy"> <!--"input" có kiểu "reset" thiết lập tất cả các giá trị trên form về mặc định ban đầu-->
+            </form>
+<hr>
+            <!------------------------------------------RADIO - CHECKBOX - BUTTON - FILE------------------------------------------>
+
+            <h3>k. Kiểu &lt;radio&gt; - &lt;checkbox&gt; - &lt;button&gt; - &lt;file&gt; </h3>
+            <form>
+                <!-- Radio dùng để tạo ra các nút chọn hình tròn, cho phép người dùng chọn đúng 1 trong nhiều tùy chọn khác nhau -->
+                <input type="radio" name="gioitinh" value="0" checked> Nam <br> 
+                <input type="radio" name="gioitinh" value="1"> Nữ <br>
+<br>
+                <fieldset>
+                    <legend>Bạn quan tâm:</legend>
+                    <!-- checkbox dùng để tạo ra 1 ô chọn hình vuông, cho phép người dùng check chọn từ không đến nhiều lựa chon khác nhau -->
+                        <input type="checkbox" name="chk1" value="html"> HTML <br>
+                        <input type="checkbox" name="chk2" value="css"> CSS <br>
+                        <input type="checkbox" name="chk3" value="javascript"> JavaScript 
+                </fieldset> <br>
+                <!-- <button> tạo ra nút nhấn -->
+                <input type="button" value="Hãy nhấn" onclick="alert('Đây là kiểu Button!')">
+                <br> <br>
+                <!-- "file" tạo ra 1 hộp chọn tập tin, thường dùng để upload file -->
+                Chọn file: <input type="file">
+            </form>
+<HR>
+            <!------------------------------------------COLOR - NUMBER - RANGE - DATE------------------------------------------>
+
+            <h3>i. Kiểu &lt;color&gt; - &lt;number&gt; - &lt;range&gt; - &lt;date&gt; </h3>
+            <form>
+                <!--Phần <input> có kiểu color dùng để tạo ra 1 hộp chọn màu sắc-->
+                Chọn màu:
+                <input type="color">
+            </form><br>
+
+            <form>
+                Nhập điểm (0 - 50): 
+                <input type="number" min="0" max="50">
+            </form> <br>
+            <!-- Phần tử <input> kiểu number dùng để tạo ra 1 ô nhập số. -->
+
+            <form oninput="kq.value = so.value">
+                <input type="range" name="so" min="0" max="500" step="5">
+                <output name="kq" for="so"></output>
+            </form>
+            <!--
+                Range: Tạo trường chọn giá trị kiểu thanh trượt. Giá trị mặc định 0 - 100
+                Thiết lập giá trị: min(thiết lập giá trị tối thiểu) max(thiết lập giá trị tối đa) step(khoảng giá trị tăng/giảm)
+            -->
+            <br>
+
+            <form>
+                Chọn ngày:
+                <input type="date">
+                <!-- Kiểu data: tạo ra ô nhập, chịn ngày/tháng/năm. Có thể giới hạn thời gian thông qua thuộc tính Min và Max-->
+            </form><br>
+<hr>
+            <!------------------------------------------DATETIME_LOCAL - MONTH - TIME - WEEK------------------------------------------>
+
+            <h3>u. Kiểu &lt;datatime-local&gt; - &lt;month&gt; - &lt;time&gt; - &lt;week&gt;</h3>
+            <form>
+                Chọn ngày giờ:
+                <input type="datetime-local">
+                <!--Datetime-local: Dùng để tạo ra một ô nhập, chọn gồm ngày và giờ-->
+            </form> <br>
+
+            <form>
+                Chọn tháng năm:
+                <input type="month">
+                <!--Kiểu month: Tạo ra một ô chọn tháng và năm-->
+            </form><br>
+
+            <form>
+                Thời gian: 
+                <input type="time">
+                <!--Kiểu time: Tạo ra một ô nhập, chọn giờ và phút-->
+            </form><br>
+
+            <form>
+                Chọn tuần:
+                <input type="week">
+                <!-- Kiểu week: Tạo ra 1 ô nhập chọn tuần trong năm -->
+            </form><br>
+<hr>
+            <!------------------------------------------EMAIL - SEARCH - TEL - URL------------------------------------------>
+
+            <h3>f. Kiểu &lt;email&gt; - &lt;search&gt; - &lt;tel&gt; - &lt;url&gt;</h3>
+            <form>
+                Email:
+                <input type="email">
+                <!--Kiểu email: Tạo địa chỉ email-->
+                <input type="button" value="OK" onclick="alert('Chúc mừng bạn!')">
+            </form><br>
+
+            <form>
+                Tìm kiếm: 
+                <input type="search">
+                <!--Kiểu seach: Tạo ra một ô nhập tìm kiếm-->
+                <input type="button" value="Tra cứu" onclick="alert('Đã tìm thấy')">
+            </form><br> 
+
+            <form>
+                Số điện thoại:
+                <input type="tel" name="txttel" pattern="[0-9]{10}">
+                <input type="submit" value="Gửi">
+                <!--Kiểu tel: Nhập số điện thoại
+                    Pattern: Tạo khuôn nhập liệu.
+                -->
+            </form><br>
+
+            <form>
+                Địa chỉ trang
+                <input type="url">
+                <!--Kiểu url: Tạo ra một ô nhập địa chỉ url.-->
+                <input type="submit" value="Kiểm tra">
+            </form>
+
+            <h3>Các thuộc tính của input</h3>
+
+                <h4>disable : Khóa phần tử, không cho chọn hay sửa</h4>
+                <h4>max     : Chỉ định giá trị tối đa</h4>
+                <h4>min     : Chỉ định giá trị tối thiểu</h4>
+                <h4>maxlenghth: Chỉ định số ký tự tối đa</h4>
+                <h4>step    : Khoảng giá trị mỗi lần tăng/giảm</h4>
+                <h4>value   : Gán giá trị mặc định cho phần tử</h4>
+                <h4>size    : Chỉ định kích  thước theo số ký tự</h4>
+                <h4>required: Bắt buộc nhập, không được bỏ trống </h4>
+                <h4>readonly: Không cho cập nhật</h4>
+                <h4>pattern : Mẫu biểu thức chính qui để kiểm tra giá trị hợp lệ</h4>
+</body>
+</html>
