@@ -734,7 +734,8 @@
                 controls = 1: Hiển thị các nút điều khiển (Mặc định là =0)
            -->
 <hr>
-            <h3>d. Hình tròn</h3>
+            <h3>d. Đồ họa với SVG</h3>
+            <h4>1d. Hình tròn</h4>
             <svg height="200" width="200">
                 <circle
                     cx = "100"
@@ -755,7 +756,7 @@
                 fill = "pink": màu sắc bên trong hình vẽ
             -->
 <hr>
-            <h3>e. Hình chữ nhật</h3> 
+            <h4>2d. Hình chữ nhật</h4> 
             <svg height="120" width="200">
                 <rect
                     width = "180"
@@ -768,7 +769,7 @@
                 rect: định nghĩa hình chữ nhật, hình vuông
             -->
 <hr>        
-            <h3>h. Hình vuông</h3>
+            <h4>3d. Hình vuông</h4>
             <svg width ="150" height="150">
                 <rect
                     width= "150"
@@ -786,7 +787,7 @@
              -->
 <hr>
 
-            <h3>j. Hình vuông bo tròn góc</h3>
+            <h4>4d. Hình vuông bo tròn góc</h4>
             <svg width="200" height="200">
                 <rect
                     width="150" height="150"
@@ -803,5 +804,78 @@
                 x = "20" y="20": Xác định vị trí của góc trên bên trái của hình chữ nhật, cách mép trái và mép trên của vùng vẽ SVG lần lượt 20 pixel.
                 rx = "30" ry = "30": bán kính bo tròn của các góc của hình chữ nhật, biến HCN thành HV có góc bo tròn với bán kính là 30px
             -->
+<hr>
+            <h4>5d1. Hình elip</h4>
+            <SVG width = "200" height="200">
+                <ellipse 
+                    cx="100" cy="100"
+                    rx="80" ry="50"
+                    style="fill:yellow;
+                        stroke: purple;
+                        stroke-width: 2;"
+                />
+            </SVG>
+            <!-- thẻ <ellipse>: định nghĩa hình elip 
+                thuộc tính như hình tròn. Riêng bán kính thuộc tính 'rx' và 'ry' định
+                độ lớn cho bán kính theo chiều ngang và dọc    
+            -->
+
+            <h4>5d2. Hình elip</h4>
+            <svg width="200" height="200">
+                <ellipse
+                    cx="100" cy="100"
+                    rx="20" ry="90"
+                    style="fill:red;
+                            stroke: black;
+                            stroke-width: 3;"
+                />
+                <ellipse
+                    cx="100" cy="100"
+                    rx="90" ry="20"
+                    style="fill: aquamarine;
+                    stroke: fuchsia;
+                    stroke-width: 2;"
+                />
+            </svg>   
+<hr>
+            <h4>6d. Đường thẳng</h4>
+            <svg width="200" height="200">
+                <line 
+                    x1="0" y1="0"
+                    x2="200" y2="200"
+                    style="stroke: black;"
+                />    
+                <line 
+                    x1="0" y1="100"
+                    x2="200" y2="100"
+                    style="stroke: red;"
+                />    
+            </svg>
+            <!-- thẻ <line>: định nghĩa đưuòng thẳng
+                thuộc tính x1 và y1 tọa độ điểm bắt đầu
+                thuộc tính x2 và y2 tọa độ điểm kết thúc
+            -->
+<hr>
+            <h4>7d1. Hình đa giác</h4>
+            <svg height="220" width="400">
+                <polygon
+                    points="200,10 250,190 250,190 160,210"
+                style="fill:lime; stroke: black; stroke-width: 3;"
+                />
+            </svg>
+            <!-- thẻ <polygon>: định nghĩa hình đa giác
+                tức là các hình khép kính được tạo thành từ ít nhất 3 cạnh trở lên.
+                Thuộc tính 'points' định vị tọa độ vị trí các điểm của hình.    
+            -->
+            <h4>7d2. Hình đa giác </h4>
+            <svg width="400" height="400">
+                <!-- Nền đỏ -->
+                <rect width="500" height="220" style="fill:red;" />
+            
+                <polygon 
+                points="100,10 40,198 190,78 10,78 160,198"
+                    style="fill:yellow; stroke: yellow; stroke-width: 2;"
+                />
+            </svg>
 </body>
 </html>
